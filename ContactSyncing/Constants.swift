@@ -7,8 +7,3 @@
 //
 
 import Foundation
-
-struct RemoteSyncingConfigurations {
-	static let apiContactsSyncChunkLimit = 2
-	static let apiContactsSyncCallDuration: TimeInterval = 1.0
-}

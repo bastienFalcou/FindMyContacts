@@ -15,9 +15,6 @@ final class PhoneContact: Object {
 	dynamic var phoneNumber: String = ""
 	dynamic var username: String = ""
 
-	// Relationships
-	fileprivate let creditCards = List<CreditCard>()
-
 	override static func primaryKey() -> String? {
 		return "identifier"
 	}
