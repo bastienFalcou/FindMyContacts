@@ -1,15 +1,23 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2ic-nA-DEd">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2ic-nA-DEd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Glober-Bold.otf">
+            <string>Glober-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Syncing Contacts-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="EntranceViewController" customModule="ContactSyncing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="EntranceViewController" customModule="FindMyContacts" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -19,8 +27,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0i2-NG-hJA" userLabel="Controls Container View">
+                                <rect key="frame" x="8" y="72" width="359" height="72"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pp6-BO-Z9t">
+                                        <rect key="frame" x="229" y="38" width="126" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <state key="normal" title="SYNC CONTACTS">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -30,6 +40,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tT7-j2-FR6">
+                                        <rect key="frame" x="178" y="4" width="177" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <state key="normal" title="REMOVE ALL CONTACTS">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -52,14 +63,17 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6sg-4K-kHh" userLabel="Status Container View">
+                                <rect key="frame" x="8" y="152" width="359" height="34"/>
                                 <subviews>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YPr-gC-DBf">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="2"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="aOO-Dh-RXv"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="w0A-Bd-ot8"/>
                                         </constraints>
                                     </progressView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Syncing" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Cq-yG-bRi">
+                                        <rect key="frame" x="151.5" y="9" width="56.5" height="18"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -78,24 +92,49 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="53" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hJe-5j-s6W">
+                                <rect key="frame" x="8" y="194" width="359" height="465"/>
                                 <color key="backgroundColor" red="0.93002569400000001" green="0.93002569400000001" blue="0.93002569400000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="qsC-LS-ca3">
+                                    <rect key="frame" x="0.0" y="0.0" width="359" height="28"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOME DAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdW-mm-6C0" customClass="TamaggoLabel">
+                                            <rect key="frame" x="0.0" y="0.0" width="359" height="28"/>
+                                            <fontDescription key="fontDescription" name="Glober-Bold" family="Glober" pointSize="12"/>
+                                            <color key="textColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.98431372549999996" green="0.98431372549999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="BdW-mm-6C0" secondAttribute="trailing" id="iiv-mD-nNQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="BdW-mm-6C0" secondAttribute="bottom" id="pOE-WF-oY5"/>
+                                        <constraint firstItem="BdW-mm-6C0" firstAttribute="top" secondItem="qsC-LS-ca3" secondAttribute="top" id="sGv-NI-gRb"/>
+                                        <constraint firstItem="BdW-mm-6C0" firstAttribute="leading" secondItem="qsC-LS-ca3" secondAttribute="leading" id="tXm-Zc-Xcy"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="BdW-mm-6C0" id="2Hh-Zx-065"/>
+                                    </connections>
+                                </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactTableViewCell" rowHeight="53" id="lan-yo-gmE" customClass="ContactTableViewCell" customModule="ContactSyncing" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="359" height="53"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactTableViewCell" rowHeight="53" id="lan-yo-gmE" customClass="ContactTableViewCell" customModule="FindMyContacts" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="56" width="359" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lan-yo-gmE" id="o62-Hg-RB2">
-                                            <frame key="frameInset" width="359" height="53"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="359" height="52.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone-Contact-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="RUR-gL-scn">
+                                                    <rect key="frame" x="8" y="11.5" width="19" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="19" id="8o7-v8-UK9"/>
                                                         <constraint firstAttribute="width" secondItem="RUR-gL-scn" secondAttribute="height" multiplier="19:30" id="AD6-VZ-bSi"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2Y-Ly-dn9">
+                                                    <rect key="frame" x="35" y="8" width="316" height="36.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

@@ -14,6 +14,7 @@ final class PhoneContact: Object {
 	dynamic var identifier: String = ""
 	dynamic var phoneNumber: String = ""
 	dynamic var username: String = ""
+	dynamic var dateAdded: Date = Date()
 
 	override static func primaryKey() -> String? {
 		return "identifier"

@@ -35,8 +35,7 @@ final class EntranceViewController: UIViewController {
 		self.tableDataSource.dataSource.innerDataSource <~ self.viewModel.dataSource
 
 		self.removeAllContactsButton.reactive.isEnabled <~ self.viewModel.isSyncing.map { !$0 }
-		self.syncingStatusLabel.reactive.text <~ self.viewModel.isSyncing.map { $0 ? "Syncing in background" : "Inactive" }
-		self.syncingProgressView.reactive.progress <~ self.viewModel.syncingProgress.map { Float($0) }
+		self.syncingStatusLabel.reactive.text <~ self.viewModel.isSyncing.map { $0 ? "Syncing in background" : "Synced" }
 	}
 
 	@IBAction func removeAllContactsButtonTapped(_ sender: AnyObject) {
