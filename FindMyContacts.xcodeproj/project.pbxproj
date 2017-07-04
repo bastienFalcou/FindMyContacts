@@ -19,8 +19,6 @@
 		0C5417071EB3A22F00E1DBBE /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416EA1EB3A21200E1DBBE /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0C5417081EB3A22F00E1DBBE /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416EB1EB3A21200E1DBBE /* Result.framework */; };
 		0C5417091EB3A22F00E1DBBE /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416EB1EB3A21200E1DBBE /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0C54170A1EB3A22F00E1DBBE /* Pods_ContactSyncing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB3D5B562B9BA95AF69E378 /* Pods_ContactSyncing.framework */; };
-		0C54170B1EB3A22F00E1DBBE /* Pods_ContactSyncing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABB3D5B562B9BA95AF69E378 /* Pods_ContactSyncing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0C6638C21E1FF61F003C1008 /* EntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6638C11E1FF61F003C1008 /* EntranceViewController.swift */; };
 		0C6638C51E1FF63C003C1008 /* PhoneContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6638C41E1FF63C003C1008 /* PhoneContact.swift */; };
 		0C6638C71E1FF828003C1008 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6638C61E1FF828003C1008 /* CreditCard.swift */; };
@@ -42,6 +40,7 @@
 		0CDDB6881E27EB7600BE8E7E /* SyncProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDB6871E27EB7600BE8E7E /* SyncProtocol.swift */; };
 		0CDDB68C1E27ECB600BE8E7E /* PhoneContact+Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDB68B1E27ECB600BE8E7E /* PhoneContact+Sync.swift */; };
 		0CDDB68E1E27ED3500BE8E7E /* PhoneContact+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDB68D1E27ED3500BE8E7E /* PhoneContact+API.swift */; };
+		5D1CBB02C1142D2B4E02B6B7 /* Pods_FindMyContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E837C7E8168C1886ED0028 /* Pods_FindMyContacts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +67,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0C54170B1EB3A22F00E1DBBE /* Pods_ContactSyncing.framework in Embed Frameworks */,
 				0C5417031EB3A22F00E1DBBE /* EthanolUtilities.framework in Embed Frameworks */,
 				0C5416FF1EB3A22F00E1DBBE /* DataSource.framework in Embed Frameworks */,
 				0C5417071EB3A22F00E1DBBE /* ReactiveSwift.framework in Embed Frameworks */,
@@ -137,7 +135,10 @@
 		0CDDB68D1E27ED3500BE8E7E /* PhoneContact+API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PhoneContact+API.swift"; path = "Networking/API/PhoneContact+API.swift"; sourceTree = "<group>"; };
 		16A7AABA1B7E5FFB287F140B /* Pods-ContactSyncing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactSyncing.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContactSyncing/Pods-ContactSyncing.release.xcconfig"; sourceTree = "<group>"; };
 		2CA7D95A5F8662EB27B0B837 /* Pods-ContactSyncing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactSyncing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContactSyncing/Pods-ContactSyncing.debug.xcconfig"; sourceTree = "<group>"; };
+		88E837C7E8168C1886ED0028 /* Pods_FindMyContacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyContacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB3D5B562B9BA95AF69E378 /* Pods_ContactSyncing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactSyncing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBB8E4CF4117E00F06573E40 /* Pods-FindMyContacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyContacts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyContacts/Pods-FindMyContacts.debug.xcconfig"; sourceTree = "<group>"; };
+		FADF6B8F762AEEB7FEEF6756 /* Pods-FindMyContacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyContacts.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyContacts/Pods-FindMyContacts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,13 +146,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C54170A1EB3A22F00E1DBBE /* Pods_ContactSyncing.framework in Frameworks */,
 				0C5417021EB3A22F00E1DBBE /* EthanolUtilities.framework in Frameworks */,
 				0C5416FE1EB3A22F00E1DBBE /* DataSource.framework in Frameworks */,
 				0C5417061EB3A22F00E1DBBE /* ReactiveSwift.framework in Frameworks */,
 				0C5417081EB3A22F00E1DBBE /* Result.framework in Frameworks */,
 				0C5417001EB3A22F00E1DBBE /* EthanolContacts.framework in Frameworks */,
 				0C5417041EB3A22F00E1DBBE /* ReactiveCocoa.framework in Frameworks */,
+				5D1CBB02C1142D2B4E02B6B7 /* Pods_FindMyContacts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +203,7 @@
 				0C66389C1E1FEA48003C1008 /* ReactiveSwift.framework */,
 				0C66389D1E1FEA48003C1008 /* Result.framework */,
 				ABB3D5B562B9BA95AF69E378 /* Pods_ContactSyncing.framework */,
+				88E837C7E8168C1886ED0028 /* Pods_FindMyContacts.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -361,6 +363,8 @@
 			children = (
 				2CA7D95A5F8662EB27B0B837 /* Pods-ContactSyncing.debug.xcconfig */,
 				16A7AABA1B7E5FFB287F140B /* Pods-ContactSyncing.release.xcconfig */,
+				BBB8E4CF4117E00F06573E40 /* Pods-FindMyContacts.debug.xcconfig */,
+				FADF6B8F762AEEB7FEEF6756 /* Pods-FindMyContacts.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -432,7 +436,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Bastien Falcou";
 				TargetAttributes = {
 					0C9B5B491E1FA80F00F7EF7A = {
@@ -515,7 +519,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		1774BF807C62049C45EE94B3 /* [CP] Copy Pods Resources */ = {
@@ -530,7 +534,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContactSyncing/Pods-ContactSyncing-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FindMyContacts/Pods-FindMyContacts-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6FC25CCDC275AD61E5F00E3F /* [CP] Embed Pods Frameworks */ = {
@@ -545,7 +549,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContactSyncing/Pods-ContactSyncing-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FindMyContacts/Pods-FindMyContacts-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -643,6 +647,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -693,6 +698,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -720,7 +726,7 @@
 		};
 		0C9B5B731E1FA81000F7EF7A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CA7D95A5F8662EB27B0B837 /* Pods-ContactSyncing.debug.xcconfig */;
+			baseConfigurationReference = BBB8E4CF4117E00F06573E40 /* Pods-FindMyContacts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 975YEVYX95;
@@ -735,7 +741,7 @@
 		};
 		0C9B5B741E1FA81000F7EF7A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16A7AABA1B7E5FFB287F140B /* Pods-ContactSyncing.release.xcconfig */;
+			baseConfigurationReference = FADF6B8F762AEEB7FEEF6756 /* Pods-FindMyContacts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 975YEVYX95;

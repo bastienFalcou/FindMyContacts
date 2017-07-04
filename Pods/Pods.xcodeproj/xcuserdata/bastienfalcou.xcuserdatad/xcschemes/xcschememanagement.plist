@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-ContactSyncing.xcscheme</key>
+		<key>Pods-FindMyContacts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>155A003235D11E1C598DCE89A4F37F1A</key>
+		<key>552F4E3BA6748D1281735B7E05412F37</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7FBA138E8C5E342C933B82E1E144C098</key>
+		<key>A91463051191A10E1BC056264EE7DF9D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EFA851A5C1D60DBEF00B133DCA9F9458</key>
+		<key>E1415DB4A14C24B01E2CB3F8A3E0D634</key>
 		<dict>
 			<key>primary</key>
 			<true/>

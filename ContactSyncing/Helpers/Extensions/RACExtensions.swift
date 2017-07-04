@@ -28,7 +28,7 @@ extension SignalProducerProtocol {
 		}
 	}
 	
-	func delay(startAfter interval: TimeInterval, onScheduler scheduler: DateSchedulerProtocol)
+	func delay(startAfter interval: TimeInterval, onScheduler scheduler: DateScheduler)
 		-> ReactiveSwift.SignalProducer<Value, Error>
 	{
 		return SignalProducer<(), Error>(value: ())
@@ -62,7 +62,7 @@ extension SignalProducerProtocol where Error == NoError {
 		return flatMap(.latest) { transform($0)?.producer ?? SignalProducer<P.Value, NoError>.empty }
 	}
 	
-	public func debounce( _ interval: TimeInterval, onScheduler scheduler: DateSchedulerProtocol) -> SignalProducer<Value, Error> {
+	public func debounce( _ interval: TimeInterval, onScheduler scheduler: DateScheduler) -> SignalProducer<Value, Error> {
 		return flatMap(.latest, transform: { next in
 			SignalProducer(value: next).delay(interval, on: scheduler)
 		})
