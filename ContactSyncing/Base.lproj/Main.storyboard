@@ -8,11 +8,6 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Glober-Bold.otf">
-            <string>Glober-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Syncing Contacts-->
         <scene sceneID="tne-QT-ifu">
@@ -96,31 +91,9 @@
                                 <color key="backgroundColor" red="0.93002569400000001" green="0.93002569400000001" blue="0.93002569400000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="qsC-LS-ca3">
-                                    <rect key="frame" x="0.0" y="0.0" width="359" height="28"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOME DAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdW-mm-6C0" customClass="TamaggoLabel">
-                                            <rect key="frame" x="0.0" y="0.0" width="359" height="28"/>
-                                            <fontDescription key="fontDescription" name="Glober-Bold" family="Glober" pointSize="12"/>
-                                            <color key="textColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" red="0.98431372549999996" green="0.98431372549999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="BdW-mm-6C0" secondAttribute="trailing" id="iiv-mD-nNQ"/>
-                                        <constraint firstAttribute="bottom" secondItem="BdW-mm-6C0" secondAttribute="bottom" id="pOE-WF-oY5"/>
-                                        <constraint firstItem="BdW-mm-6C0" firstAttribute="top" secondItem="qsC-LS-ca3" secondAttribute="top" id="sGv-NI-gRb"/>
-                                        <constraint firstItem="BdW-mm-6C0" firstAttribute="leading" secondItem="qsC-LS-ca3" secondAttribute="leading" id="tXm-Zc-Xcy"/>
-                                    </constraints>
-                                    <connections>
-                                        <outlet property="titleLabel" destination="BdW-mm-6C0" id="2Hh-Zx-065"/>
-                                    </connections>
-                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactTableViewCell" rowHeight="53" id="lan-yo-gmE" customClass="ContactTableViewCell" customModule="FindMyContacts" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="359" height="53"/>
+                                        <rect key="frame" x="0.0" y="28" width="359" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lan-yo-gmE" id="o62-Hg-RB2">
                                             <rect key="frame" x="0.0" y="0.0" width="359" height="52.5"/>

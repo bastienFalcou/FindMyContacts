@@ -31,11 +31,8 @@ final class EntranceViewModel: NSObject {
 				.splitBetween {
 					return floor($0.0.dateAdded.timeIntervalSince1970 / (60 * 60 * 24)) != floor($0.1.dateAdded.timeIntervalSince1970 / (60 * 60 * 24))
 				}.map { contacts in
-					let date = contacts.first?.dateAdded
-					return DataSourceSection(
-						items: contacts.map {  ContactTableViewCellModel(contact: $0) },
-						supplementaryItems: [UICollectionElementKindSectionHeader: ContactTableHeaderViewModel(title: date?.readable ?? "")]
-					)
+					//let date = contacts.first?.dateAdded
+					return DataSourceSection(items: contacts.map { ContactTableViewCellModel(contact: $0) })
 			}
 			self?.dataSource.value = StaticDataSource(sections: sections)
 		}

@@ -13,13 +13,18 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactTableHeaderView" customModule="FindMyContacts" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="Frx-S3-mWW" id="Xja-LX-UTn"/>
+                <outlet property="titleLabel" destination="PAI-yw-XdH" id="JHe-sc-RP2"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="Frx-S3-mWW">
             <rect key="frame" x="0.0" y="0.0" width="600" height="28"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOME DAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAI-yw-XdH" customClass="TamaggoLabel" customModule="FindMyContacts" customModuleProvider="target">
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOME DAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAI-yw-XdH">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="28"/>
                     <fontDescription key="fontDescription" name="Glober-Bold" family="Glober" pointSize="12"/>
                     <color key="textColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -35,9 +40,6 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="titleLabel" destination="PAI-yw-XdH" id="70b-NE-vwH"/>
-            </connections>
             <point key="canvasLocation" x="79" y="-171"/>
         </view>
     </objects>

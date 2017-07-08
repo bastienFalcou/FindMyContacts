@@ -9,18 +9,12 @@
 import UIKit
 import DataSource
 import ReactiveSwift
+import EthanolUIComponents
 
-class ContactTableHeaderView: TableViewHeaderFooterView {
-	@IBOutlet private var titleLabel: UILabel?
+class ContactTableHeaderView: ETHNibView {
+	@IBOutlet private(set) var titleLabel: UILabel?
 
-	override func awakeFromNib() {
-		super.awakeFromNib()
-
-		self.viewModel.producer
-			.map { $0 as? ContactTableHeaderViewModel }
-			.skipNil()
-			.startWithValues { [weak self] in
-				self?.titleLabel?.text = $0.title
-		}
+	override func nibName() -> String {
+		return "ContactTableHeaderView"
 	}
 }

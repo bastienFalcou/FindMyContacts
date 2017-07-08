@@ -24,14 +24,8 @@ final class EntranceViewController: UIViewController {
 
 		ContactFetcher.shared.requestContactsPermission()
 
-		self.tableDataSource.reuseIdentifierForItem = { _, item in
-			if item is ContactTableViewCellModel {
-				return ContactTableViewCellModel.reuseIdentifier
-			} else if item is ContactTableHeaderViewModel {
-				return ContactTableHeaderViewModel.reuseIdentifier
-			} else {
-				fatalError("Entrance: invalid reuse identifier for cell")
-			}
+		self.tableDataSource.reuseIdentifierForItem = { _ in
+			return ContactTableViewCellModel.reuseIdentifier
 		}
 
 		self.tableView.dataSource = self.tableDataSource
@@ -54,5 +48,14 @@ final class EntranceViewController: UIViewController {
 }
 
 extension EntranceViewController: UITableViewDelegate {
+	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+		let firstViewModel = self.tableDataSource.dataSource.item(at: IndexPath(row: 0, section: section)) as! ContactTableViewCellModel
+		let headerView = ContactTableHeaderView()
+		headerView.titleLabel?.text = firstViewModel.contact.dateAdded.readable
+		return headerView
+	}
 
+	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+		return 28.0
+	}
 }
