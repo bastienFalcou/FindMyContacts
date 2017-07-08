@@ -46,6 +46,15 @@ final class EntranceViewController: UITableViewController {
 		self.viewModel.removeAllContacts()
 	}
 
+	@IBAction func settingsBarButtonItemTapped(_ sender: Any) {
+		let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+		let deleteAction = UIAlertAction(title: "Delete All History", style: .destructive) { alert in
+			self.viewModel.removeAllContacts()
+		}
+		optionMenu.addAction(deleteAction)
+		self.present(optionMenu, animated: true, completion: nil)
+	}
+
 	@objc fileprivate func handleRefresh(refreshControl: UIRefreshControl) {
 		self.viewModel.syncContacts()
 	}
