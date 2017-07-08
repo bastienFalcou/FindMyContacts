@@ -24,8 +24,14 @@ final class EntranceViewController: UIViewController {
 
 		ContactFetcher.shared.requestContactsPermission()
 
-		self.tableDataSource.reuseIdentifierForItem = { _ in
-			return ContactTableViewCellModel.reuseIdentifier
+		self.tableDataSource.reuseIdentifierForItem = { _, item in
+			if item is ContactTableViewCellModel {
+				return ContactTableViewCellModel.reuseIdentifier
+			} else if item is ContactTableHeaderViewModel {
+				return ContactTableHeaderViewModel.reuseIdentifier
+			} else {
+				fatalError("Entrance: invalid reuse identifier for cell")
+			}
 		}
 
 		self.tableView.dataSource = self.tableDataSource

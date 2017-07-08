@@ -9,5 +9,9 @@
 import Foundation
 
 struct ContactTableHeaderViewModel {
+	static var reuseIdentifier: String {
+		return String(describing: ContactTableHeaderView.self)
+	}
+
 	var title: String
 }

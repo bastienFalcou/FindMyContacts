@@ -11,6 +11,7 @@
 		0C0536211F0BCBA9005FFC83 /* ContactTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0536201F0BCBA9005FFC83 /* ContactTableHeaderView.swift */; };
 		0C0536231F0BCBB1005FFC83 /* ContactTableHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0536221F0BCBB1005FFC83 /* ContactTableHeaderViewModel.swift */; };
 		0C0536251F0BCEA2005FFC83 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0536241F0BCEA2005FFC83 /* FoundationExtensions.swift */; };
+		0C0536271F0BD0FD005FFC83 /* ContactTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C0536261F0BD0FD005FFC83 /* ContactTableHeaderView.xib */; };
 		0C5416FE1EB3A22F00E1DBBE /* DataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416E61EB3A21200E1DBBE /* DataSource.framework */; };
 		0C5416FF1EB3A22F00E1DBBE /* DataSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416E61EB3A21200E1DBBE /* DataSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0C5417001EB3A22F00E1DBBE /* EthanolContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416E71EB3A21200E1DBBE /* EthanolContacts.framework */; };
@@ -85,6 +86,7 @@
 		0C0536201F0BCBA9005FFC83 /* ContactTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableHeaderView.swift; path = Views/ContactTableHeaderView.swift; sourceTree = "<group>"; };
 		0C0536221F0BCBB1005FFC83 /* ContactTableHeaderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableHeaderViewModel.swift; sourceTree = "<group>"; };
 		0C0536241F0BCEA2005FFC83 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
+		0C0536261F0BD0FD005FFC83 /* ContactTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactTableHeaderView.xib; sourceTree = "<group>"; };
 		0C5416E61EB3A21200E1DBBE /* DataSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DataSource.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/DataSource.framework"; sourceTree = "<group>"; };
 		0C5416E71EB3A21200E1DBBE /* EthanolContacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolContacts.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/EthanolContacts.framework"; sourceTree = "<group>"; };
 		0C5416E81EB3A21200E1DBBE /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolUtilities.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/EthanolUtilities.framework"; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			children = (
 				0C69A72F1E2509EC005A22B5 /* ContactTableViewCell.swift */,
 				0C69A7311E250A05005A22B5 /* ContactTableViewCellModel.swift */,
+				0C0536261F0BD0FD005FFC83 /* ContactTableHeaderView.xib */,
 				0C0536201F0BCBA9005FFC83 /* ContactTableHeaderView.swift */,
 				0C0536221F0BCBB1005FFC83 /* ContactTableHeaderViewModel.swift */,
 			);
@@ -474,6 +477,7 @@
 				0C9B5B581E1FA80F00F7EF7A /* LaunchScreen.storyboard in Resources */,
 				0C9B5B551E1FA80F00F7EF7A /* Assets.xcassets in Resources */,
 				0C9B5B531E1FA80F00F7EF7A /* Main.storyboard in Resources */,
+				0C0536271F0BD0FD005FFC83 /* ContactTableHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@ import UIKit
 import DataSource
 import ReactiveSwift
 
-class MediaSectionHeaderView: CollectionViewReusableView {
+class ContactTableHeaderView: TableViewHeaderFooterView {
 	@IBOutlet private var titleLabel: UILabel?
 
 	override func awakeFromNib() {
