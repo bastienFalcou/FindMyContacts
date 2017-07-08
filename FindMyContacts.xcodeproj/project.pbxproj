@@ -12,6 +12,18 @@
 		0C0536231F0BCBB1005FFC83 /* ContactTableHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0536221F0BCBB1005FFC83 /* ContactTableHeaderViewModel.swift */; };
 		0C0536251F0BCEA2005FFC83 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0536241F0BCEA2005FFC83 /* FoundationExtensions.swift */; };
 		0C0536271F0BD0FD005FFC83 /* ContactTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C0536261F0BD0FD005FFC83 /* ContactTableHeaderView.xib */; };
+		0C4BAB561F110EA8000EC585 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4A1F110E87000EC585 /* CocoaLumberjack.framework */; };
+		0C4BAB571F110EA8000EC585 /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4A1F110E87000EC585 /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C4BAB581F110EA8000EC585 /* EthanolTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4B1F110E87000EC585 /* EthanolTools.framework */; };
+		0C4BAB591F110EA8000EC585 /* EthanolTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4B1F110E87000EC585 /* EthanolTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C4BAB5A1F110EA8000EC585 /* EthanolUIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4C1F110E87000EC585 /* EthanolUIComponents.framework */; };
+		0C4BAB5B1F110EA8000EC585 /* EthanolUIComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4C1F110E87000EC585 /* EthanolUIComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C4BAB5C1F110EA8000EC585 /* EthanolValidationFormatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4D1F110E87000EC585 /* EthanolValidationFormatting.framework */; };
+		0C4BAB5D1F110EA8000EC585 /* EthanolValidationFormatting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4D1F110E87000EC585 /* EthanolValidationFormatting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C4BAB5E1F110EA8000EC585 /* libPhoneNumberiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4E1F110E87000EC585 /* libPhoneNumberiOS.framework */; };
+		0C4BAB5F1F110EA8000EC585 /* libPhoneNumberiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4E1F110E87000EC585 /* libPhoneNumberiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C4BAB601F110EA8000EC585 /* NSInvocationHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4F1F110E87000EC585 /* NSInvocationHelpers.framework */; };
+		0C4BAB611F110EA8000EC585 /* NSInvocationHelpers.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4F1F110E87000EC585 /* NSInvocationHelpers.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0C5416FE1EB3A22F00E1DBBE /* DataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416E61EB3A21200E1DBBE /* DataSource.framework */; };
 		0C5416FF1EB3A22F00E1DBBE /* DataSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416E61EB3A21200E1DBBE /* DataSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0C5417001EB3A22F00E1DBBE /* EthanolContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416E71EB3A21200E1DBBE /* EthanolContacts.framework */; };
@@ -72,8 +84,14 @@
 				0C5417031EB3A22F00E1DBBE /* EthanolUtilities.framework in Embed Frameworks */,
 				0C5416FF1EB3A22F00E1DBBE /* DataSource.framework in Embed Frameworks */,
 				0C5417071EB3A22F00E1DBBE /* ReactiveSwift.framework in Embed Frameworks */,
+				0C4BAB611F110EA8000EC585 /* NSInvocationHelpers.framework in Embed Frameworks */,
+				0C4BAB5B1F110EA8000EC585 /* EthanolUIComponents.framework in Embed Frameworks */,
 				0C5417091EB3A22F00E1DBBE /* Result.framework in Embed Frameworks */,
 				0C5417011EB3A22F00E1DBBE /* EthanolContacts.framework in Embed Frameworks */,
+				0C4BAB5D1F110EA8000EC585 /* EthanolValidationFormatting.framework in Embed Frameworks */,
+				0C4BAB571F110EA8000EC585 /* CocoaLumberjack.framework in Embed Frameworks */,
+				0C4BAB5F1F110EA8000EC585 /* libPhoneNumberiOS.framework in Embed Frameworks */,
+				0C4BAB591F110EA8000EC585 /* EthanolTools.framework in Embed Frameworks */,
 				0C5417051EB3A22F00E1DBBE /* ReactiveCocoa.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -87,6 +105,12 @@
 		0C0536221F0BCBB1005FFC83 /* ContactTableHeaderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableHeaderViewModel.swift; sourceTree = "<group>"; };
 		0C0536241F0BCEA2005FFC83 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 		0C0536261F0BD0FD005FFC83 /* ContactTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactTableHeaderView.xib; sourceTree = "<group>"; };
+		0C4BAB4A1F110E87000EC585 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/CocoaLumberjack.framework"; sourceTree = "<group>"; };
+		0C4BAB4B1F110E87000EC585 /* EthanolTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolTools.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/EthanolTools.framework"; sourceTree = "<group>"; };
+		0C4BAB4C1F110E87000EC585 /* EthanolUIComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolUIComponents.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/EthanolUIComponents.framework"; sourceTree = "<group>"; };
+		0C4BAB4D1F110E87000EC585 /* EthanolValidationFormatting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolValidationFormatting.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/EthanolValidationFormatting.framework"; sourceTree = "<group>"; };
+		0C4BAB4E1F110E87000EC585 /* libPhoneNumberiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libPhoneNumberiOS.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/libPhoneNumberiOS.framework"; sourceTree = "<group>"; };
+		0C4BAB4F1F110E87000EC585 /* NSInvocationHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NSInvocationHelpers.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/NSInvocationHelpers.framework"; sourceTree = "<group>"; };
 		0C5416E61EB3A21200E1DBBE /* DataSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DataSource.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/DataSource.framework"; sourceTree = "<group>"; };
 		0C5416E71EB3A21200E1DBBE /* EthanolContacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolContacts.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/EthanolContacts.framework"; sourceTree = "<group>"; };
 		0C5416E81EB3A21200E1DBBE /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolUtilities.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/EthanolUtilities.framework"; sourceTree = "<group>"; };
@@ -150,13 +174,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C4BAB5E1F110EA8000EC585 /* libPhoneNumberiOS.framework in Frameworks */,
+				0C4BAB581F110EA8000EC585 /* EthanolTools.framework in Frameworks */,
 				0C5417021EB3A22F00E1DBBE /* EthanolUtilities.framework in Frameworks */,
 				0C5416FE1EB3A22F00E1DBBE /* DataSource.framework in Frameworks */,
+				0C4BAB561F110EA8000EC585 /* CocoaLumberjack.framework in Frameworks */,
 				0C5417061EB3A22F00E1DBBE /* ReactiveSwift.framework in Frameworks */,
+				0C4BAB5C1F110EA8000EC585 /* EthanolValidationFormatting.framework in Frameworks */,
 				0C5417081EB3A22F00E1DBBE /* Result.framework in Frameworks */,
 				0C5417001EB3A22F00E1DBBE /* EthanolContacts.framework in Frameworks */,
 				0C5417041EB3A22F00E1DBBE /* ReactiveCocoa.framework in Frameworks */,
+				0C4BAB5A1F110EA8000EC585 /* EthanolUIComponents.framework in Frameworks */,
 				5D1CBB02C1142D2B4E02B6B7 /* Pods_FindMyContacts.framework in Frameworks */,
+				0C4BAB601F110EA8000EC585 /* NSInvocationHelpers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +210,12 @@
 		0C1BE5501E1FB4C00030BFF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C4BAB4A1F110E87000EC585 /* CocoaLumberjack.framework */,
+				0C4BAB4B1F110E87000EC585 /* EthanolTools.framework */,
+				0C4BAB4C1F110E87000EC585 /* EthanolUIComponents.framework */,
+				0C4BAB4D1F110E87000EC585 /* EthanolValidationFormatting.framework */,
+				0C4BAB4E1F110E87000EC585 /* libPhoneNumberiOS.framework */,
+				0C4BAB4F1F110E87000EC585 /* NSInvocationHelpers.framework */,
 				0C5416E61EB3A21200E1DBBE /* DataSource.framework */,
 				0C5416E71EB3A21200E1DBBE /* EthanolContacts.framework */,
 				0C5416E81EB3A21200E1DBBE /* EthanolUtilities.framework */,
