@@ -70,6 +70,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="New Contacts" id="co4-Fx-dGZ"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="T5e-Tl-H06">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Rz-to-HXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -25,14 +25,29 @@ final class EntranceViewController: UITableViewController {
 
 		self.tableView.dataSource = self.tableDataSource
 		self.tableView.delegate = self
-		self.tableDataSource.tableView = self.tableView
 
+		self.tableDataSource.tableView = self.tableView
 		self.tableDataSource.dataSource.innerDataSource <~ self.viewModel.dataSource
+
+		self.refreshControl?.addTarget(self, action: #selector(EntranceViewController.handleRefresh(refreshControl:)), for: UIControlEvents.valueChanged)
+
+		self.viewModel.isSyncing.producer.startWithValues { [weak self] isSyncing in
+			if isSyncing {
+				self?.refreshControl?.beginRefreshing()
+			} else {
+				self?.refreshControl?.endRefreshing()
+			}
+		}
+
 		self.viewModel.syncContacts()
 	}
 
 	@IBAction func removeAllContactsButtonTapped(_ sender: AnyObject) {
 		self.viewModel.removeAllContacts()
+	}
+
+	@objc fileprivate func handleRefresh(refreshControl: UIRefreshControl) {
+		self.viewModel.syncContacts()
 	}
 }
 
