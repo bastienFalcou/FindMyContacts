@@ -45,7 +45,7 @@ extension EntranceViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 		let firstViewModel = self.tableDataSource.dataSource.item(at: IndexPath(row: 0, section: section)) as! ContactTableViewCellModel
 		let headerView = ContactTableHeaderView()
-		headerView.titleLabel?.text = firstViewModel.contact.dateAdded.readable
+		headerView.titleLabel?.text = firstViewModel.contact.dateAdded.readable.uppercased()
 		return headerView
 	}
 
