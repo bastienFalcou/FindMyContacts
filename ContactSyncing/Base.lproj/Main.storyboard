@@ -9,78 +9,71 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My New Contacts-->
-        <scene sceneID="tne-QT-ifu">
+        <!--New Contacts-->
+        <scene sceneID="97R-bW-VIx">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="EntranceViewController" customModule="FindMyContacts" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="Fvn-xB-7pz" customClass="EntranceViewController" customModule="FindMyContacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mQp-9x-v4S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="42" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hJe-5j-s6W">
-                                <rect key="frame" x="0.0" y="72" width="375" height="587"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <inset key="separatorInset" minX="53" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactTableViewCell" rowHeight="42" id="lan-yo-gmE" customClass="ContactTableViewCell" customModule="FindMyContacts" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="42"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lan-yo-gmE" id="o62-Hg-RB2">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="41.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone-Existing-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="RUR-gL-scn">
-                                                    <rect key="frame" x="12" y="7" width="27" height="27.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="RUR-gL-scn" secondAttribute="height" id="5yb-Sg-Dv0"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2Y-Ly-dn9">
-                                                    <rect key="frame" x="53" y="8" width="314" height="25.5"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <inset key="separatorInset" minX="53" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="MJ5-m4-zOr">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MJ5-m4-zOr" id="sBt-U2-PtP">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactTableViewCell" rowHeight="42" id="WeS-Sy-c1w" customClass="ContactTableViewCell" customModule="FindMyContacts" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="42"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WeS-Sy-c1w" id="MJU-WS-z4P">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="41.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone-Existing-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="EMO-38-7pW">
+                                            <rect key="frame" x="12" y="7" width="27" height="27.5"/>
                                             <constraints>
-                                                <constraint firstItem="RUR-gL-scn" firstAttribute="leading" secondItem="o62-Hg-RB2" secondAttribute="leading" constant="12" id="104-y0-Rv6"/>
-                                                <constraint firstItem="E2Y-Ly-dn9" firstAttribute="leading" secondItem="RUR-gL-scn" secondAttribute="trailing" constant="14" id="1tN-P0-Kyz"/>
-                                                <constraint firstAttribute="bottom" secondItem="E2Y-Ly-dn9" secondAttribute="bottom" constant="8" id="gXL-D3-l8h"/>
-                                                <constraint firstItem="RUR-gL-scn" firstAttribute="top" secondItem="o62-Hg-RB2" secondAttribute="top" constant="7" id="kxB-SL-Y6Y"/>
-                                                <constraint firstItem="RUR-gL-scn" firstAttribute="centerY" secondItem="o62-Hg-RB2" secondAttribute="centerY" id="lO7-Yf-U0h"/>
-                                                <constraint firstAttribute="trailing" secondItem="E2Y-Ly-dn9" secondAttribute="trailing" constant="8" id="sFF-Dg-ZTD"/>
-                                                <constraint firstItem="E2Y-Ly-dn9" firstAttribute="top" secondItem="o62-Hg-RB2" secondAttribute="top" constant="8" id="wqt-Kx-h48"/>
+                                                <constraint firstAttribute="width" secondItem="EMO-38-7pW" secondAttribute="height" id="jT6-ha-r4z"/>
                                             </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <outlet property="contactNameLabel" destination="E2Y-Ly-dn9" id="3R3-Np-7U0"/>
-                                            <outlet property="statusIcon" destination="RUR-gL-scn" id="XYc-Bi-PEo"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="hJe-5j-s6W" secondAttribute="trailing" id="Lta-I1-suW"/>
-                            <constraint firstItem="hJe-5j-s6W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UTm-s1-6Sd"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hJe-5j-s6W" secondAttribute="bottom" constant="8" id="dw9-Qr-ZRb"/>
-                            <constraint firstItem="hJe-5j-s6W" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="yyT-0R-PuG"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="My New Contacts" id="htw-KF-QZZ"/>
-                    <connections>
-                        <outlet property="tableView" destination="hJe-5j-s6W" id="Kxq-6f-2cw"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QN3-gw-C1Q">
+                                            <rect key="frame" x="53" y="8" width="314" height="25.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QN3-gw-C1Q" firstAttribute="top" secondItem="MJU-WS-z4P" secondAttribute="top" constant="8" id="3L8-VP-hF9"/>
+                                        <constraint firstItem="QN3-gw-C1Q" firstAttribute="leading" secondItem="EMO-38-7pW" secondAttribute="trailing" constant="14" id="7ph-kT-h2z"/>
+                                        <constraint firstItem="EMO-38-7pW" firstAttribute="top" secondItem="MJU-WS-z4P" secondAttribute="top" constant="7" id="Sn4-rL-n74"/>
+                                        <constraint firstAttribute="trailing" secondItem="QN3-gw-C1Q" secondAttribute="trailing" constant="8" id="eAC-zq-87y"/>
+                                        <constraint firstAttribute="bottom" secondItem="QN3-gw-C1Q" secondAttribute="bottom" constant="8" id="l8Y-3O-vDM"/>
+                                        <constraint firstItem="EMO-38-7pW" firstAttribute="centerY" secondItem="MJU-WS-z4P" secondAttribute="centerY" id="xNx-No-EQg"/>
+                                        <constraint firstItem="EMO-38-7pW" firstAttribute="leading" secondItem="MJU-WS-z4P" secondAttribute="leading" constant="12" id="zEy-Rf-0a8"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="contactNameLabel" destination="QN3-gw-C1Q" id="xDx-FL-RPe"/>
+                                    <outlet property="statusIcon" destination="EMO-38-7pW" id="ZPb-cr-WSO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Fvn-xB-7pz" id="qAZ-XK-sb0"/>
+                            <outlet property="delegate" destination="Fvn-xB-7pz" id="dGz-nP-v4N"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="New Contacts" id="co4-Fx-dGZ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Rz-to-HXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1184.8" y="36.431784107946029"/>
+            <point key="canvasLocation" x="1929" y="37"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Byd-0G-Z3A">
@@ -93,12 +86,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZA1-eo-UaB"/>
+                        <segue destination="Fvn-xB-7pz" kind="relationship" relationship="rootViewController" id="cCD-au-qSY"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avy-hA-UjP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="313" y="38"/>
+            <point key="canvasLocation" x="1074" y="36"/>
         </scene>
     </scenes>
     <resources>

@@ -10,12 +10,7 @@ import UIKit
 import ReactiveSwift
 import DataSource
 
-final class EntranceViewController: UIViewController {
-	@IBOutlet private var tableView: UITableView!
-	@IBOutlet private var removeAllContactsButton: UIButton!
-	@IBOutlet private var syncingProgressView: UIProgressView!
-	@IBOutlet private var syncingStatusLabel: UILabel!
-
+final class EntranceViewController: UITableViewController {
 	let viewModel = EntranceViewModel()
 	let tableDataSource = TableViewDataSource()
 
@@ -41,15 +36,15 @@ final class EntranceViewController: UIViewController {
 	}
 }
 
-extension EntranceViewController: UITableViewDelegate {
-	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+extension EntranceViewController {
+	override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 		let firstViewModel = self.tableDataSource.dataSource.item(at: IndexPath(row: 0, section: section)) as! ContactTableViewCellModel
 		let headerView = ContactTableHeaderView()
 		headerView.titleLabel?.text = firstViewModel.contact.dateAdded.readable.uppercased()
 		return headerView
 	}
 
-	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+	override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
 		return 28.0
 	}
 }
