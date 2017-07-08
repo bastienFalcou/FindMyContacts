@@ -29,6 +29,18 @@ extension Reactive where Base: UIViewController {
 	}
 }
 
+extension Reactive where Base: UITableViewController {
+	var isRefreshing: BindingTarget<Bool> {
+		return target {
+			if $1 {
+				$0.refreshControl?.beginRefreshing()
+			} else {
+				$0.refreshControl?.endRefreshing()
+			}
+		}
+	}
+}
+
 extension Reactive where Base: UISwitch {
 	var isOn: BindingTarget<Bool> {
 		return target { $0.isOn = $1 }

@@ -30,20 +30,9 @@ final class EntranceViewController: UITableViewController {
 		self.tableDataSource.dataSource.innerDataSource <~ self.viewModel.dataSource
 
 		self.refreshControl?.addTarget(self, action: #selector(EntranceViewController.handleRefresh(refreshControl:)), for: UIControlEvents.valueChanged)
-
-		self.viewModel.isSyncing.producer.startWithValues { [weak self] isSyncing in
-			if isSyncing {
-				self?.refreshControl?.beginRefreshing()
-			} else {
-				self?.refreshControl?.endRefreshing()
-			}
-		}
+		self.reactive.isRefreshing <~ self.viewModel.isSyncing
 
 		self.viewModel.syncContacts()
-	}
-
-	@IBAction func removeAllContactsButtonTapped(_ sender: AnyObject) {
-		self.viewModel.removeAllContacts()
 	}
 
 	@IBAction func settingsBarButtonItemTapped(_ sender: Any) {
