@@ -33,17 +33,11 @@ final class EntranceViewController: UIViewController {
 		self.tableDataSource.tableView = self.tableView
 
 		self.tableDataSource.dataSource.innerDataSource <~ self.viewModel.dataSource
-
-		self.removeAllContactsButton.reactive.isEnabled <~ self.viewModel.isSyncing.map { !$0 }
-		self.syncingStatusLabel.reactive.text <~ self.viewModel.isSyncing.map { $0 ? "Syncing in background" : "Synced" }
+		self.viewModel.syncContacts()
 	}
 
 	@IBAction func removeAllContactsButtonTapped(_ sender: AnyObject) {
 		self.viewModel.removeAllContacts()
-	}
-
-	@IBAction func syncContactsButtonTapped(_ sender: AnyObject) {
-		self.viewModel.syncContacts()
 	}
 }
 
