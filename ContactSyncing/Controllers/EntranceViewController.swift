@@ -47,12 +47,21 @@ final class EntranceViewController: UITableViewController {
 	}
 
 	@IBAction func settingsBarButtonItemTapped(_ sender: Any) {
-		let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-		let deleteAction = UIAlertAction(title: "Delete All History", style: .destructive) { alert in
+		let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+		let markAsReadAction = UIAlertAction(title: "Mark all as Read", style: .default) { alert in
+			PhoneContact.markAllAsRead()
+			self.tableView.reloadData()
+		}
+		let deleteAction = UIAlertAction(title: "Delete all History", style: .destructive) { alert in
 			self.viewModel.removeAllContacts()
 		}
-		optionMenu.addAction(deleteAction)
-		self.present(optionMenu, animated: true, completion: nil)
+		let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { alert in
+			alertController.dismiss(animated: true, completion: nil)
+		}
+		alertController.addAction(markAsReadAction)
+		alertController.addAction(deleteAction)
+		alertController.addAction(cancelAction)
+		self.present(alertController, animated: true, completion: nil)
 	}
 
 	@objc fileprivate func handleRefresh(refreshControl: UIRefreshControl) {

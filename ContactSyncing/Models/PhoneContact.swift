@@ -38,4 +38,14 @@ final class PhoneContact: Object {
 			print("PhoneContact: failed to sync local database")
 		}
 	}
+
+	static func markAllAsRead() {
+		do {
+			try RealmManager.shared.realm.write {
+				RealmManager.shared.realm.objects(PhoneContact.self).forEach { $0.hasBeenSeen = true }
+			}
+		} catch {
+			print("PhoneContact: failed to mark all contacts as seen when closing application")
+		}
+	}
 }
