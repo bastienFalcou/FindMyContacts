@@ -35,8 +35,7 @@ final class EntranceViewController: UIViewController {
 		self.tableDataSource.dataSource.innerDataSource <~ self.viewModel.dataSource
 
 		self.removeAllContactsButton.reactive.isEnabled <~ self.viewModel.isSyncing.map { !$0 }
-		self.syncingStatusLabel.reactive.text <~ self.viewModel.isSyncing.map { $0 ? "Syncing in background" : "Inactive" }
-		self.syncingProgressView.reactive.progress <~ self.viewModel.syncingProgress.map { Float($0) }
+		self.syncingStatusLabel.reactive.text <~ self.viewModel.isSyncing.map { $0 ? "Syncing in background" : "Synced" }
 	}
 
 	@IBAction func removeAllContactsButtonTapped(_ sender: AnyObject) {
@@ -49,5 +48,14 @@ final class EntranceViewController: UIViewController {
 }
 
 extension EntranceViewController: UITableViewDelegate {
+	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+		let firstViewModel = self.tableDataSource.dataSource.item(at: IndexPath(row: 0, section: section)) as! ContactTableViewCellModel
+		let headerView = ContactTableHeaderView()
+		headerView.titleLabel?.text = firstViewModel.contact.dateAdded.readable
+		return headerView
+	}
 
+	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+		return 28.0
+	}
 }

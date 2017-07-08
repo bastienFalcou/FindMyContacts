@@ -6,17 +6,16 @@
 //  Copyright © 2017 Bastien Falcou. All rights reserved.
 //
 
-import Foundation
-import ReactiveSwift
-import DataSource
+import UIKit
 import Result
+import DataSource
+import ReactiveSwift
 
 final class EntranceViewModel: NSObject {
 	var dataSource = MutableProperty<DataSource>(EmptyDataSource())
 	let disposable = CompositeDisposable()
 
 	let syncedPhoneContacts = MutableProperty<Set<PhoneContact>>([])
-	let syncingProgress = MutableProperty(0.0)
 	let isSyncing = MutableProperty(false)
 
 	deinit {
@@ -28,10 +27,14 @@ final class EntranceViewModel: NSObject {
 
 		self.disposable += self.isSyncing <~ ContactFetcher.shared.syncContactsAction.isExecuting
 		self.disposable += self.syncedPhoneContacts.producer.startWithValues { [weak self] syncedPhoneContacts in
-			self?.dataSource.value = StaticDataSource(items: syncedPhoneContacts.map { ContactTableViewCellModel(contact: $0) })
-
-			let localPhoneContactsCount = PhoneContact.allPhoneContacts().count
-			self?.syncingProgress.value = localPhoneContactsCount == 0 ? 0.0 : Double(syncedPhoneContacts.count) / Double(localPhoneContactsCount)
+			let sections: [DataSourceSection<ContactTableViewCellModel>] = syncedPhoneContacts
+				.splitBetween {
+					return floor($0.0.dateAdded.timeIntervalSince1970 / (60 * 60 * 24)) != floor($0.1.dateAdded.timeIntervalSince1970 / (60 * 60 * 24))
+				}.map { contacts in
+					//let date = contacts.first?.dateAdded
+					return DataSourceSection(items: contacts.map { ContactTableViewCellModel(contact: $0) })
+			}
+			self?.dataSource.value = StaticDataSource(sections: sections)
 		}
 	}
 
