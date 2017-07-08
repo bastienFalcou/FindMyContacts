@@ -16,4 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		return true
 	}
+
+	func applicationWillTerminate(_ application: UIApplication) {
+		do {
+			try RealmManager.shared.realm.write {
+				RealmManager.shared.realm.objects(PhoneContact.self).forEach { $0.hasBeenSeen = true }
+			}
+		} catch {
+			print("Failed to mark all contacts as seen when closing application")
+		}
+	}
 }
