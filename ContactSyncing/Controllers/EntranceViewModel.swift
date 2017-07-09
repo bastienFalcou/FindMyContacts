@@ -44,6 +44,7 @@ final class EntranceViewModel: NSObject {
 		self.syncingWaitForMinimumDelayAction.apply().start()
 		self.disposable += ContactFetcher.shared.syncContactsAction.apply().startWithResult { [weak self] result in
 			if let syncedContacts = result.value {
+				self?.syncedPhoneContacts.value.removeAll()
 				syncedContacts.forEach { self?.syncedPhoneContacts.value.insert($0) }
 				self?.updateDataSource()
 			}
@@ -54,7 +55,7 @@ final class EntranceViewModel: NSObject {
 		do {
 			try RealmManager.shared.realm.write {
 				RealmManager.shared.realm.delete(RealmManager.shared.realm.objects(PhoneContact.self))
-				self.syncedPhoneContacts.value = Set(PhoneContact.allPhoneContacts())
+				self.syncedPhoneContacts.value.removeAll()
 				self.updateDataSource()
 			}
 		} catch {
@@ -63,17 +64,18 @@ final class EntranceViewModel: NSObject {
 	}
 
 	fileprivate func updateDataSource() {
-		let newContacts = self.syncedPhoneContacts.value.filter { $0.hasBeenSeen }
-		let newContactsSections = DataSourceSection(items: newContacts.map { ContactTableViewCellModel(contact: $0) })
-
 		let existingContacts = self.syncedPhoneContacts.value.filter { !$0.hasBeenSeen }
-		let existingContactsSections: [DataSourceSection<ContactTableViewCellModel>] = existingContacts
+		var sections: [DataSourceSection<ContactTableViewCellModel>] = existingContacts
 			.splitBetween {
 				return floor($0.0.dateAdded.timeIntervalSince1970 / (60 * 60 * 24)) != floor($0.1.dateAdded.timeIntervalSince1970 / (60 * 60 * 24))
 			}.map { contacts in
 				return DataSourceSection(items: contacts.map { ContactTableViewCellModel(contact: $0) })
 		}
 
-		self.dataSource.value = StaticDataSource(sections: existingContactsSections + [newContactsSections])
+		let newContacts = self.syncedPhoneContacts.value.filter { $0.hasBeenSeen }
+		if !newContacts.isEmpty {
+			sections.append(DataSourceSection(items: newContacts.map { ContactTableViewCellModel(contact: $0) }))
+		}
+		self.dataSource.value = StaticDataSource(sections: sections)
 	}
 }

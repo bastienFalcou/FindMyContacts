@@ -51,7 +51,8 @@ final class ContactFetcher: NSObject {
 
 					do {
 						backgroundRealm.add(contactEntities)
-						try	backgroundRealm.commitWrite()
+						try backgroundRealm.commitWrite()
+						try PhoneContact.substractObsoleteLocalContacts(with: Array(contactEntities), realm: backgroundRealm)
 
 						DispatchQueue.main.async {
 							RealmManager.shared.realm.refresh()
