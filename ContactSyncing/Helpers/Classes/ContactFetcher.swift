@@ -18,7 +18,7 @@ final class ContactFetcher: NSObject {
 	private let phoneContactFetcher = PhoneContactFetcher()
 	var syncContactsAction: Action<Void, [PhoneContact], NSError>!
 
-	let areContactsActive = MutableProperty(false)
+	let isContactsPermissionGranted = MutableProperty(false)
 
 	override init() {
 		super.init()
@@ -77,7 +77,7 @@ final class ContactFetcher: NSObject {
 
 	fileprivate func updateAuthorizationStatusIfNeeded() {
 		let authorizationStatus = CNContactStore.authorizationStatus(for: .contacts)
-		self.areContactsActive.value = authorizationStatus == .authorized
+		self.isContactsPermissionGranted.value = authorizationStatus == .authorized
 	}
 
 	@objc fileprivate func applicationWillEnterForeground(notification: Foundation.Notification) {

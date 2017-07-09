@@ -54,8 +54,10 @@ final class ContactsTableViewController: UITableViewController {
 		self.viewModel.syncContacts()
 	}
 	@objc fileprivate func applicationWillEnterForeground(notification: Foundation.Notification) {
-		self.forceDisplayRefreshControl()
-		self.viewModel.syncContacts()
+		if ContactFetcher.shared.isContactsPermissionGranted.value {
+			self.forceDisplayRefreshControl()
+			self.viewModel.syncContacts()
+		}
 	}
 }
 

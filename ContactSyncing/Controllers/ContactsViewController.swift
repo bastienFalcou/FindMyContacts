@@ -41,10 +41,10 @@ final class ContactsViewController: UIViewController {
 		self.disposable += self.contingencyView.reactive.animatedAlpha <~ SignalProducer.combineLatest(
 			self.tableViewController.syncedPhoneContacts.producer.map { !$0.isEmpty },
 			self.tableViewController.isSyncing.producer,
-			ContactFetcher.shared.areContactsActive.producer
-		).map { ($0 || $1) && $2 ? 0.0 : 1.0 }
+			ContactFetcher.shared.isContactsPermissionGranted.producer
+		).map { $0 || $1 || !$2 ? 0.0 : 1.0 }
 
-		self.disposable += self.contactsPermissionNotGrantedView.reactive.animatedAlpha <~ ContactFetcher.shared.areContactsActive.map { $0 ? 0.0 : 1.0 }
+		self.disposable += self.contactsPermissionNotGrantedView.reactive.animatedAlpha <~ ContactFetcher.shared.isContactsPermissionGranted.map { $0 ? 0.0 : 1.0 }
 	}
 
 	deinit {
