@@ -16,6 +16,9 @@ final class ContactsViewController: UIViewController {
 	static let noNewContactString = "No New Contact"
 	static let newContactString = "New Contact"
 
+	@IBOutlet fileprivate(set) var contingencyView: UIView!
+	@IBOutlet fileprivate(set) var contactsPermissionNotGrantedView: UIView!
+
 	var nonRefresingTitle: String {
 		let newContactsCount = UInt(self.tableViewController.syncedPhoneContacts.value.filter { !$0.hasBeenSeen }.count)
 		if newContactsCount == 0 {
@@ -26,6 +29,7 @@ final class ContactsViewController: UIViewController {
 	}
 
 	var tableViewController: ContactsTableViewController!
+	private let disposable = CompositeDisposable()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -33,6 +37,18 @@ final class ContactsViewController: UIViewController {
 		ContactFetcher.shared.requestContactsPermission()
 
 		self.reactive.title <~ self.tableViewController.isSyncing.map { $0 ? "Refreshing Contacts" : self.nonRefresingTitle }
+
+		self.disposable += self.contingencyView.reactive.animatedAlpha <~ SignalProducer.combineLatest(
+			self.tableViewController.syncedPhoneContacts.producer.map { !$0.isEmpty },
+			self.tableViewController.isSyncing.producer,
+			ContactFetcher.shared.areContactsActive.producer
+		).map { ($0 || $1) && $2 ? 0.0 : 1.0 }
+
+		self.disposable += self.contactsPermissionNotGrantedView.reactive.animatedAlpha <~ ContactFetcher.shared.areContactsActive.map { $0 ? 0.0 : 1.0 }
+	}
+
+	deinit {
+		self.disposable.dispose()
 	}
 
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -74,5 +90,9 @@ final class ContactsViewController: UIViewController {
 		alertController.addAction(deleteAction)
 		alertController.addAction(cancelAction)
 		self.present(alertController, animated: true, completion: nil)
+	}
+
+	@IBAction func contingencyViewTapped(_ sender: Any) {
+		self.tableViewController.syncContacts()
 	}
 }

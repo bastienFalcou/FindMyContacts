@@ -47,8 +47,6 @@
 		0C69A7361E251200005A22B5 /* RACTerminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69A7341E251200005A22B5 /* RACTerminal.swift */; };
 		0C69A7381E251444005A22B5 /* ContactsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69A7371E251444005A22B5 /* ContactsTableViewModel.swift */; };
 		0C932E741F123C0800F1D88B /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C932E731F123C0800F1D88B /* UIKitExtensions.swift */; };
-		0C932E761F1268E000F1D88B /* ContingencyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C932E751F1268E000F1D88B /* ContingencyView.xib */; };
-		0C932E781F126A0000F1D88B /* ContingencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C932E771F126A0000F1D88B /* ContingencyView.swift */; };
 		0C9B5B4E1E1FA80F00F7EF7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B5B4D1E1FA80F00F7EF7A /* AppDelegate.swift */; };
 		0C9B5B531E1FA80F00F7EF7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9B5B511E1FA80F00F7EF7A /* Main.storyboard */; };
 		0C9B5B551E1FA80F00F7EF7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C9B5B541E1FA80F00F7EF7A /* Assets.xcassets */; };
@@ -152,8 +150,6 @@
 		0C6C28651EB37C2800ADD05C /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-fnhlnlcwwerdpbcbuuyypzlfijty/Build/Products/Debug-iphoneos/ReactiveSwift.framework"; sourceTree = "<group>"; };
 		0C6C28661EB37C2800ADD05C /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-fnhlnlcwwerdpbcbuuyypzlfijty/Build/Products/Debug-iphoneos/Result.framework"; sourceTree = "<group>"; };
 		0C932E731F123C0800F1D88B /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIKitExtensions.swift; path = Helpers/Extensions/UIKitExtensions.swift; sourceTree = "<group>"; };
-		0C932E751F1268E000F1D88B /* ContingencyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContingencyView.xib; sourceTree = "<group>"; };
-		0C932E771F126A0000F1D88B /* ContingencyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContingencyView.swift; path = Views/ContingencyView.swift; sourceTree = "<group>"; };
 		0C9B5B4A1E1FA80F00F7EF7A /* FindMyContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMyContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9B5B4D1E1FA80F00F7EF7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C9B5B521E1FA80F00F7EF7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -282,8 +278,6 @@
 				0C69A7311E250A05005A22B5 /* ContactTableViewCellModel.swift */,
 				0C0536261F0BD0FD005FFC83 /* ContactTableHeaderView.xib */,
 				0C0536201F0BCBA9005FFC83 /* ContactTableHeaderView.swift */,
-				0C932E751F1268E000F1D88B /* ContingencyView.xib */,
-				0C932E771F126A0000F1D88B /* ContingencyView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -525,7 +519,6 @@
 				0C9B5B581E1FA80F00F7EF7A /* LaunchScreen.storyboard in Resources */,
 				0C9B5B551E1FA80F00F7EF7A /* Assets.xcassets in Resources */,
 				0C9B5B531E1FA80F00F7EF7A /* Main.storyboard in Resources */,
-				0C932E761F1268E000F1D88B /* ContingencyView.xib in Resources */,
 				0C0536271F0BD0FD005FFC83 /* ContactTableHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -604,7 +597,6 @@
 				0C932E741F123C0800F1D88B /* UIKitExtensions.swift in Sources */,
 				0C05361F1F0BC991005FFC83 /* SequenceExtensions.swift in Sources */,
 				0C6638CC1E1FFFB9003C1008 /* ContactFetcher.swift in Sources */,
-				0C932E781F126A0000F1D88B /* ContingencyView.swift in Sources */,
 				0C69A7381E251444005A22B5 /* ContactsTableViewModel.swift in Sources */,
 				0C9B5B4E1E1FA80F00F7EF7A /* AppDelegate.swift in Sources */,
 				0C0536211F0BCBA9005FFC83 /* ContactTableHeaderView.swift in Sources */,

@@ -18,18 +18,21 @@ final class ContactFetcher: NSObject {
 	private let phoneContactFetcher = PhoneContactFetcher()
 	var syncContactsAction: Action<Void, [PhoneContact], NSError>!
 
-	private let areContactsActive = MutableProperty(false)
+	let areContactsActive = MutableProperty(false)
 
 	override init() {
 		super.init()
+
 		self.syncContactsAction = Action(self.syncLocalAddressBook)
+
+		NotificationCenter.default.addObserver(self, selector: #selector(applicationWillEnterForeground(notification:)), name: .UIApplicationWillEnterForeground, object: nil)
 	}
 
 	func requestContactsPermission() {
 		self.phoneContactFetcher.authorize(success: {
-			print("Contacts: access granted")
-		}) { error in
-			print("Contacts: access denied")
+			self.updateAuthorizationStatusIfNeeded()
+		}) { _ in
+			self.updateAuthorizationStatusIfNeeded()
 		}
 	}
 
@@ -70,5 +73,14 @@ final class ContactFetcher: NSObject {
 				sink.send(error: error)
 			}
 		}
+	}
+
+	fileprivate func updateAuthorizationStatusIfNeeded() {
+		let authorizationStatus = CNContactStore.authorizationStatus(for: .contacts)
+		self.areContactsActive.value = authorizationStatus == .authorized
+	}
+
+	@objc fileprivate func applicationWillEnterForeground(notification: Foundation.Notification) {
+		self.updateAuthorizationStatusIfNeeded()
 	}
 }

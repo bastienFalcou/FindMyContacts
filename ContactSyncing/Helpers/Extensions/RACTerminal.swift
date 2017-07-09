@@ -59,6 +59,14 @@ extension Reactive where Base: UIView {
 	var borderWidth: BindingTarget<CGFloat> {
 		return target { $0.layer.borderWidth = $1 }
 	}
+
+	var animatedAlpha: BindingTarget<Float> {
+		return target { view, alpha in
+			UIView.animate(withDuration: 0.3) {
+				view.alpha = CGFloat(alpha)
+			}
+		}
+	}
 }
 
 extension Reactive where Base: UILabel {
