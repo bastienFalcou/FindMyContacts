@@ -53,16 +53,15 @@ final class EntranceViewController: UITableViewController {
 
 	@IBAction func settingsBarButtonItemTapped(_ sender: Any) {
 		let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-		let markAsReadAction = UIAlertAction(title: "Mark all as Read", style: .default) { alert in
+		let markAsReadAction = UIAlertAction(title: "Mark all as Seen", style: .default) { _ in
 			PhoneContact.markAsAllSeen()
-			self.title = EntranceViewController.noNewContactString
-			self.tableView.reloadData()
+			self.viewModel.syncContacts()
 		}
-		let deleteAction = UIAlertAction(title: "Delete all History", style: .destructive) { alert in
+		let deleteAction = UIAlertAction(title: "Delete all History", style: .destructive) { _ in
 			self.viewModel.removeAllContacts()
 			self.title = EntranceViewController.noNewContactString
 		}
-		let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { alert in
+		let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
 			alertController.dismiss(animated: true, completion: nil)
 		}
 		alertController.addAction(markAsReadAction)
