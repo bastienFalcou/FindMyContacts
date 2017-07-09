@@ -18,6 +18,15 @@ final class EntranceViewModel: NSObject {
 	let syncedPhoneContacts = MutableProperty<Set<PhoneContact>>([])
 	let isSyncing = MutableProperty(false)
 
+	let syncingWaitForMinimumDelayAction = Action<Void, Void, NoError> {
+		return SignalProducer { observer, disposable in
+			disposable += schedule(after: 1.0) {
+				observer.send(value: ())
+				observer.sendCompleted()
+			}
+		}
+	}
+
 	deinit {
 		self.disposable.dispose()
 	}
@@ -25,10 +34,14 @@ final class EntranceViewModel: NSObject {
 	override init() {
 		super.init()
 
-		self.disposable += self.isSyncing <~ ContactFetcher.shared.syncContactsAction.isExecuting
+		self.disposable += self.isSyncing <~ SignalProducer.combineLatest(
+			ContactFetcher.shared.syncContactsAction.isExecuting.producer,
+			self.syncingWaitForMinimumDelayAction.isExecuting.producer
+		).map { $0 || $1 }
 	}
 
 	func syncContacts() {
+		self.syncingWaitForMinimumDelayAction.apply().start()
 		self.disposable += ContactFetcher.shared.syncContactsAction.apply().startWithResult { [weak self] result in
 			if let syncedContacts = result.value {
 				syncedContacts.forEach { self?.syncedPhoneContacts.value.insert($0) }
