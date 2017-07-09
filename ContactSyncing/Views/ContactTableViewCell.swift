@@ -11,7 +11,8 @@ import DataSource
 import ReactiveSwift
 
 final class ContactTableViewCell: TableViewCell {
-	@IBOutlet fileprivate var contactNameLabel: UILabel!
+	@IBOutlet fileprivate(set) var contactNameLabel: UILabel!
+	@IBOutlet fileprivate(set) var statusIcon: UIImageView!
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
@@ -26,5 +27,6 @@ final class ContactTableViewCell: TableViewCell {
 
 	fileprivate func configure(with cellModel: ContactTableViewCellModel) {
 		self.contactNameLabel.text = cellModel.contact.username
+		self.statusIcon.image = cellModel.contact.hasBeenSeen ? UIImage(named: "Phone-Existing-Icon") : UIImage(named: "Phone-New-Icon")
 	}
 }

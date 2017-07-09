@@ -15,6 +15,7 @@ final class PhoneContact: Object {
 	dynamic var phoneNumber: String = ""
 	dynamic var username: String = ""
 	dynamic var dateAdded: Date = Date()
+	dynamic var hasBeenSeen: Bool = false
 
 	override static func primaryKey() -> String? {
 		return "identifier"
@@ -35,6 +36,16 @@ final class PhoneContact: Object {
 			realm.refresh()
 		} catch {
 			print("PhoneContact: failed to sync local database")
+		}
+	}
+
+	static func markAllAsRead() {
+		do {
+			try RealmManager.shared.realm.write {
+				RealmManager.shared.realm.objects(PhoneContact.self).forEach { $0.hasBeenSeen = true }
+			}
+		} catch {
+			print("PhoneContact: failed to mark all contacts as seen when closing application")
 		}
 	}
 }

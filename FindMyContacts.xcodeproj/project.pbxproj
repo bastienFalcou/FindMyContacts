@@ -23,6 +23,7 @@
 		0C4BAB5F1F110EA8000EC585 /* libPhoneNumberiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4E1F110E87000EC585 /* libPhoneNumberiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0C4BAB601F110EA8000EC585 /* NSInvocationHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4F1F110E87000EC585 /* NSInvocationHelpers.framework */; };
 		0C4BAB611F110EA8000EC585 /* NSInvocationHelpers.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4F1F110E87000EC585 /* NSInvocationHelpers.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C4BAB631F11ABFD000EC585 /* ReactiveSwiftExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4BAB621F11ABFD000EC585 /* ReactiveSwiftExtensions.swift */; };
 		0C5416FE1EB3A22F00E1DBBE /* DataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416E61EB3A21200E1DBBE /* DataSource.framework */; };
 		0C5416FF1EB3A22F00E1DBBE /* DataSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416E61EB3A21200E1DBBE /* DataSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0C5417001EB3A22F00E1DBBE /* EthanolContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416E71EB3A21200E1DBBE /* EthanolContacts.framework */; };
@@ -109,6 +110,7 @@
 		0C4BAB4D1F110E87000EC585 /* EthanolValidationFormatting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolValidationFormatting.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/EthanolValidationFormatting.framework"; sourceTree = "<group>"; };
 		0C4BAB4E1F110E87000EC585 /* libPhoneNumberiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libPhoneNumberiOS.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/libPhoneNumberiOS.framework"; sourceTree = "<group>"; };
 		0C4BAB4F1F110E87000EC585 /* NSInvocationHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NSInvocationHelpers.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/NSInvocationHelpers.framework"; sourceTree = "<group>"; };
+		0C4BAB621F11ABFD000EC585 /* ReactiveSwiftExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReactiveSwiftExtensions.swift; path = Helpers/Extensions/ReactiveSwiftExtensions.swift; sourceTree = "<group>"; };
 		0C5416E61EB3A21200E1DBBE /* DataSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DataSource.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/DataSource.framework"; sourceTree = "<group>"; };
 		0C5416E71EB3A21200E1DBBE /* EthanolContacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolContacts.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/EthanolContacts.framework"; sourceTree = "<group>"; };
 		0C5416E81EB3A21200E1DBBE /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolUtilities.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/EthanolUtilities.framework"; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 				0C69A7341E251200005A22B5 /* RACTerminal.swift */,
 				0C05361E1F0BC991005FFC83 /* SequenceExtensions.swift */,
 				0C0536241F0BCEA2005FFC83 /* FoundationExtensions.swift */,
+				0C4BAB621F11ABFD000EC585 /* ReactiveSwiftExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 				0C6638C51E1FF63C003C1008 /* PhoneContact.swift in Sources */,
 				0CDDB6881E27EB7600BE8E7E /* SyncProtocol.swift in Sources */,
 				0C69A7321E250A05005A22B5 /* ContactTableViewCellModel.swift in Sources */,
+				0C4BAB631F11ABFD000EC585 /* ReactiveSwiftExtensions.swift in Sources */,
 				0C69A7351E251200005A22B5 /* RACExtensions.swift in Sources */,
 				0CDDB6861E27AA9D00BE8E7E /* Constants.swift in Sources */,
 				0C69A7361E251200005A22B5 /* RACTerminal.swift in Sources */,

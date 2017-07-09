@@ -10,12 +10,7 @@ import UIKit
 import ReactiveSwift
 import DataSource
 
-final class EntranceViewController: UIViewController {
-	@IBOutlet private var tableView: UITableView!
-	@IBOutlet private var removeAllContactsButton: UIButton!
-	@IBOutlet private var syncingProgressView: UIProgressView!
-	@IBOutlet private var syncingStatusLabel: UILabel!
-
+final class EntranceViewController: UITableViewController {
 	let viewModel = EntranceViewModel()
 	let tableDataSource = TableViewDataSource()
 
@@ -30,32 +25,48 @@ final class EntranceViewController: UIViewController {
 
 		self.tableView.dataSource = self.tableDataSource
 		self.tableView.delegate = self
-		self.tableDataSource.tableView = self.tableView
 
+		self.tableDataSource.tableView = self.tableView
 		self.tableDataSource.dataSource.innerDataSource <~ self.viewModel.dataSource
 
-		self.removeAllContactsButton.reactive.isEnabled <~ self.viewModel.isSyncing.map { !$0 }
-		self.syncingStatusLabel.reactive.text <~ self.viewModel.isSyncing.map { $0 ? "Syncing in background" : "Synced" }
+		self.refreshControl?.addTarget(self, action: #selector(EntranceViewController.handleRefresh(refreshControl:)), for: UIControlEvents.valueChanged)
+		self.reactive.isRefreshing <~ self.viewModel.isSyncing
+
+		self.viewModel.syncContacts()
 	}
 
-	@IBAction func removeAllContactsButtonTapped(_ sender: AnyObject) {
-		self.viewModel.removeAllContacts()
+	@IBAction func settingsBarButtonItemTapped(_ sender: Any) {
+		let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+		let markAsReadAction = UIAlertAction(title: "Mark all as Read", style: .default) { alert in
+			PhoneContact.markAllAsRead()
+			self.tableView.reloadData()
+		}
+		let deleteAction = UIAlertAction(title: "Delete all History", style: .destructive) { alert in
+			self.viewModel.removeAllContacts()
+		}
+		let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { alert in
+			alertController.dismiss(animated: true, completion: nil)
+		}
+		alertController.addAction(markAsReadAction)
+		alertController.addAction(deleteAction)
+		alertController.addAction(cancelAction)
+		self.present(alertController, animated: true, completion: nil)
 	}
 
-	@IBAction func syncContactsButtonTapped(_ sender: AnyObject) {
+	@objc fileprivate func handleRefresh(refreshControl: UIRefreshControl) {
 		self.viewModel.syncContacts()
 	}
 }
 
-extension EntranceViewController: UITableViewDelegate {
-	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+extension EntranceViewController {
+	override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 		let firstViewModel = self.tableDataSource.dataSource.item(at: IndexPath(row: 0, section: section)) as! ContactTableViewCellModel
 		let headerView = ContactTableHeaderView()
-		headerView.titleLabel?.text = firstViewModel.contact.dateAdded.readable
+		headerView.titleLabel?.text = firstViewModel.contact.dateAdded.readable.uppercased()
 		return headerView
 	}
 
-	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+	override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
 		return 28.0
 	}
 }

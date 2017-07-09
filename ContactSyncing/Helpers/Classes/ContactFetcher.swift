@@ -52,9 +52,9 @@ final class ContactFetcher: NSObject {
 					do {
 						backgroundRealm.add(contactEntities)
 						try	backgroundRealm.commitWrite()
-						backgroundRealm.refresh()
 
 						DispatchQueue.main.async {
+							RealmManager.shared.realm.refresh()
 							sink.send(value: Array(RealmManager.shared.realm.objects(PhoneContact.self)))
 							sink.sendCompleted()
 						}

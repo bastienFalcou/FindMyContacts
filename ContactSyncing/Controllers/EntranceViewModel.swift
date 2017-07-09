@@ -18,6 +18,15 @@ final class EntranceViewModel: NSObject {
 	let syncedPhoneContacts = MutableProperty<Set<PhoneContact>>([])
 	let isSyncing = MutableProperty(false)
 
+	let syncingWaitForMinimumDelayAction = Action<Void, Void, NoError> {
+		return SignalProducer { observer, disposable in
+			disposable += schedule(after: 1.0) {
+				observer.send(value: ())
+				observer.sendCompleted()
+			}
+		}
+	}
+
 	deinit {
 		self.disposable.dispose()
 	}
@@ -25,23 +34,18 @@ final class EntranceViewModel: NSObject {
 	override init() {
 		super.init()
 
-		self.disposable += self.isSyncing <~ ContactFetcher.shared.syncContactsAction.isExecuting
-		self.disposable += self.syncedPhoneContacts.producer.startWithValues { [weak self] syncedPhoneContacts in
-			let sections: [DataSourceSection<ContactTableViewCellModel>] = syncedPhoneContacts
-				.splitBetween {
-					return floor($0.0.dateAdded.timeIntervalSince1970 / (60 * 60 * 24)) != floor($0.1.dateAdded.timeIntervalSince1970 / (60 * 60 * 24))
-				}.map { contacts in
-					//let date = contacts.first?.dateAdded
-					return DataSourceSection(items: contacts.map { ContactTableViewCellModel(contact: $0) })
-			}
-			self?.dataSource.value = StaticDataSource(sections: sections)
-		}
+		self.disposable += self.isSyncing <~ SignalProducer.combineLatest(
+			ContactFetcher.shared.syncContactsAction.isExecuting.producer,
+			self.syncingWaitForMinimumDelayAction.isExecuting.producer
+		).map { $0 || $1 }
 	}
 
 	func syncContacts() {
+		self.syncingWaitForMinimumDelayAction.apply().start()
 		self.disposable += ContactFetcher.shared.syncContactsAction.apply().startWithResult { [weak self] result in
 			if let syncedContacts = result.value {
 				syncedContacts.forEach { self?.syncedPhoneContacts.value.insert($0) }
+				self?.updateDataSource()
 			}
 		}
 	}
@@ -51,9 +55,20 @@ final class EntranceViewModel: NSObject {
 			try RealmManager.shared.realm.write {
 				RealmManager.shared.realm.delete(RealmManager.shared.realm.objects(PhoneContact.self))
 				self.syncedPhoneContacts.value = Set(PhoneContact.allPhoneContacts())
+				self.updateDataSource()
 			}
 		} catch {
 			print("Entrance View Model: could not remove all contacts")
 		}
+	}
+
+	fileprivate func updateDataSource() {
+		let sections: [DataSourceSection<ContactTableViewCellModel>] = self.syncedPhoneContacts.value
+			.splitBetween {
+				return floor($0.0.dateAdded.timeIntervalSince1970 / (60 * 60 * 24)) != floor($0.1.dateAdded.timeIntervalSince1970 / (60 * 60 * 24))
+			}.map { contacts in
+				return DataSourceSection(items: contacts.map { ContactTableViewCellModel(contact: $0) })
+		}
+		self.dataSource.value = StaticDataSource(sections: sections)
 	}
 }
