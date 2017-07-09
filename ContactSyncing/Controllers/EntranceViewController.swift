@@ -51,15 +51,29 @@ final class EntranceViewController: UITableViewController {
 		self.viewModel.syncContacts()
 	}
 
+	fileprivate func removeAllContacts() {
+		let alertController = UIAlertController(title: "Remove All", message: "This will reinit all of your contacts, do you really want to continue?", preferredStyle: .alert)
+
+		let okAction = UIAlertAction(title: "Remove All", style: .destructive) { _ in
+			self.viewModel.removeAllContacts()
+			self.title = EntranceViewController.noNewContactString
+		}
+		let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+		alertController.addAction(okAction)
+		alertController.addAction(cancelAction)
+
+		self.present(alertController, animated: true, completion: nil)
+	}
+
 	@IBAction func settingsBarButtonItemTapped(_ sender: Any) {
 		let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
 		let markAsReadAction = UIAlertAction(title: "Mark all as Seen", style: .default) { _ in
 			PhoneContact.markAsAllSeen()
 			self.viewModel.syncContacts()
 		}
-		let deleteAction = UIAlertAction(title: "Delete all History", style: .destructive) { _ in
-			self.viewModel.removeAllContacts()
-			self.title = EntranceViewController.noNewContactString
+		let deleteAction = UIAlertAction(title: "Remove all Contacts", style: .destructive) { _ in
+			self.removeAllContacts()
 		}
 		let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
 			alertController.dismiss(animated: true, completion: nil)
