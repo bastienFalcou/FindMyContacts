@@ -11,6 +11,18 @@ import ReactiveSwift
 import DataSource
 
 final class EntranceViewController: UITableViewController {
+	static let noNewContactString = "No New Contact"
+	static let newContactString = "New Contact"
+
+	var nonRefresingTitle: String {
+		let newContactsCount = UInt(self.viewModel.syncedPhoneContacts.value.filter { !$0.hasBeenSeen }.count)
+		if newContactsCount == 0 {
+			return EntranceViewController.noNewContactString
+		} else {
+			return "\(newContactsCount) \(EntranceViewController.newContactString)\(newContactsCount > 1 ? "s" : "")"
+		}
+	}
+
 	let viewModel = EntranceViewModel()
 	let tableDataSource = TableViewDataSource()
 
@@ -30,6 +42,7 @@ final class EntranceViewController: UITableViewController {
 		self.tableDataSource.dataSource.innerDataSource <~ self.viewModel.dataSource
 
 		self.reactive.isRefreshing <~ self.viewModel.isSyncing.skipRepeats()
+		self.reactive.title <~ self.viewModel.isSyncing.map { $0 ? "Refreshing Contacts" : self.nonRefresingTitle }
 
 		self.refreshControl?.addTarget(self, action: #selector(EntranceViewController.handleRefresh(refreshControl:)), for: .valueChanged)
 
@@ -42,10 +55,12 @@ final class EntranceViewController: UITableViewController {
 		let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
 		let markAsReadAction = UIAlertAction(title: "Mark all as Read", style: .default) { alert in
 			PhoneContact.markAsAllSeen()
+			self.title = EntranceViewController.noNewContactString
 			self.tableView.reloadData()
 		}
 		let deleteAction = UIAlertAction(title: "Delete all History", style: .destructive) { alert in
 			self.viewModel.removeAllContacts()
+			self.title = EntranceViewController.noNewContactString
 		}
 		let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { alert in
 			alertController.dismiss(animated: true, completion: nil)
