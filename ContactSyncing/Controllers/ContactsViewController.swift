@@ -80,7 +80,7 @@ final class ContactsViewController: UIViewController {
 		let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
 		let markAsReadAction = UIAlertAction(title: "Mark all as Seen", style: .default) { _ in
 			PhoneContact.markAsAllSeen()
-			self.tableViewController.syncContacts()
+			self.tableViewController.syncContactsProgrammatically()
 		}
 		let deleteAction = UIAlertAction(title: "Remove all Contacts", style: .destructive) { _ in
 			self.removeAllContacts()
@@ -95,6 +95,6 @@ final class ContactsViewController: UIViewController {
 	}
 
 	@IBAction func contingencyViewTapped(_ sender: Any) {
-		self.tableViewController.syncContacts()
+		self.tableViewController.syncContactsProgrammatically()
 	}
 }

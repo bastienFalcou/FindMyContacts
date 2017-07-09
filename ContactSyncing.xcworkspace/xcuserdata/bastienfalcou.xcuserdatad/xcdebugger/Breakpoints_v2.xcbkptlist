@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ContactSyncing/Helpers/Extensions/UIKitExtensions.swift"
-            timestampString = "521329304.024485"
+            timestampString = "521331713.271274"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "forceDisplayRefreshControl()"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "forceDisplayRefreshControl(delay:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
