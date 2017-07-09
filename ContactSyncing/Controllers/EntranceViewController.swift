@@ -85,7 +85,8 @@ extension EntranceViewController {
 	override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 		let firstViewModel = self.tableDataSource.dataSource.item(at: IndexPath(row: 0, section: section)) as! ContactTableViewCellModel
 		let headerView = ContactTableHeaderView()
-		headerView.titleLabel?.text = firstViewModel.contact.dateAdded.readable.uppercased()
+		let text = firstViewModel.contact.hasBeenSeen ? firstViewModel.contact.dateAdded.readable : "new"
+		headerView.titleLabel?.text = text.uppercased()
 		return headerView
 	}
 
