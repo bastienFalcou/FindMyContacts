@@ -11,14 +11,14 @@ import Result
 import DataSource
 import ReactiveSwift
 
-final class EntranceViewModel: NSObject {
+final class ContactsTableViewModel: NSObject {
 	var dataSource = MutableProperty<DataSource>(EmptyDataSource())
-	let disposable = CompositeDisposable()
+	private let disposable = CompositeDisposable()
 
 	let syncedPhoneContacts = MutableProperty<Set<PhoneContact>>([])
 	let isSyncing = MutableProperty(false)
 
-	let syncingWaitForMinimumDelayAction = Action<Void, Void, NoError> {
+	private let syncingWaitForMinimumDelayAction = Action<Void, Void, NoError> {
 		return SignalProducer { observer, disposable in
 			disposable += schedule(after: 1.0) {
 				observer.send(value: ())

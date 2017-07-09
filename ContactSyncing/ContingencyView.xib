@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContingencyView" customModule="FindMyContacts" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Oxh-f8-O5Z"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXC-Hp-ax2" userLabel="Container View">
+                    <rect key="frame" x="20" y="163" width="334" height="341"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone-Existing-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="kVW-Zn-VCE">
+                            <rect key="frame" x="0.0" y="0.0" width="334" height="300"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your contact list is currently empty. Add new contacts to your phone or pull this view down to refresh." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOU-wY-XY3">
+                            <rect key="frame" x="0.0" y="320" width="334" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="NOU-wY-XY3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VXC-Hp-ax2" secondAttribute="leading" id="2Lg-mK-74k"/>
+                        <constraint firstItem="NOU-wY-XY3" firstAttribute="centerX" secondItem="VXC-Hp-ax2" secondAttribute="centerX" id="3zR-dq-T2P"/>
+                        <constraint firstItem="kVW-Zn-VCE" firstAttribute="leading" secondItem="VXC-Hp-ax2" secondAttribute="leading" id="AYJ-Qg-jf0"/>
+                        <constraint firstAttribute="trailing" secondItem="kVW-Zn-VCE" secondAttribute="trailing" id="GQx-rL-5Q3"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NOU-wY-XY3" secondAttribute="trailing" id="fVi-OY-vuF"/>
+                        <constraint firstAttribute="bottom" secondItem="NOU-wY-XY3" secondAttribute="bottom" id="ugS-WO-lrh"/>
+                        <constraint firstItem="NOU-wY-XY3" firstAttribute="top" secondItem="kVW-Zn-VCE" secondAttribute="bottom" constant="20" id="xC5-I6-utL"/>
+                        <constraint firstItem="kVW-Zn-VCE" firstAttribute="top" secondItem="VXC-Hp-ax2" secondAttribute="top" id="xUW-G5-6LV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="VXC-Hp-ax2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="8DN-om-1ef"/>
+                <constraint firstItem="VXC-Hp-ax2" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="A1E-4l-H0d"/>
+                <constraint firstItem="VXC-Hp-ax2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="lHZ-qp-LwL"/>
+                <constraint firstItem="VXC-Hp-ax2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="s74-mn-C2e"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Phone-Existing-Icon" width="300" height="300"/>
+    </resources>
+</document>
