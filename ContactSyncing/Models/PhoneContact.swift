@@ -39,7 +39,7 @@ final class PhoneContact: Object {
 		}
 	}
 
-	static func markAllAsRead() {
+	static func markAsAllSeen() {
 		do {
 			try RealmManager.shared.realm.write {
 				RealmManager.shared.realm.objects(PhoneContact.self).forEach { $0.hasBeenSeen = true }

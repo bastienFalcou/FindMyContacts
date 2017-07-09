@@ -29,8 +29,11 @@ final class EntranceViewController: UITableViewController {
 		self.tableDataSource.tableView = self.tableView
 		self.tableDataSource.dataSource.innerDataSource <~ self.viewModel.dataSource
 
-		self.refreshControl?.addTarget(self, action: #selector(EntranceViewController.handleRefresh(refreshControl:)), for: UIControlEvents.valueChanged)
-		self.reactive.isRefreshing <~ self.viewModel.isSyncing
+		self.reactive.isRefreshing <~ self.viewModel.isSyncing.skipRepeats()
+
+		self.refreshControl?.addTarget(self, action: #selector(EntranceViewController.handleRefresh(refreshControl:)), for: .valueChanged)
+
+		NotificationCenter.default.addObserver(self, selector: #selector(applicationWillEnterForeground(notification:)), name: .UIApplicationWillEnterForeground, object: nil)
 
 		self.viewModel.syncContacts()
 	}
@@ -38,7 +41,7 @@ final class EntranceViewController: UITableViewController {
 	@IBAction func settingsBarButtonItemTapped(_ sender: Any) {
 		let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
 		let markAsReadAction = UIAlertAction(title: "Mark all as Read", style: .default) { alert in
-			PhoneContact.markAllAsRead()
+			PhoneContact.markAsAllSeen()
 			self.tableView.reloadData()
 		}
 		let deleteAction = UIAlertAction(title: "Delete all History", style: .destructive) { alert in
@@ -54,6 +57,11 @@ final class EntranceViewController: UITableViewController {
 	}
 
 	@objc fileprivate func handleRefresh(refreshControl: UIRefreshControl) {
+		self.viewModel.syncContacts()
+	}
+
+	@objc fileprivate func applicationWillEnterForeground(notification: Foundation.Notification) {
+		self.forceDisplayRefreshControl()
 		self.viewModel.syncContacts()
 	}
 }
