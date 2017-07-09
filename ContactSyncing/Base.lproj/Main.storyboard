@@ -179,6 +179,7 @@
                     <connections>
                         <outlet property="contactsPermissionNotGrantedView" destination="qvt-5c-6ZE" id="rAD-5a-8aP"/>
                         <outlet property="contingencyView" destination="u5Z-0K-mTd" id="fSk-yd-quS"/>
+                        <outlet property="settingsBarButtonItem" destination="oRh-UV-ObY" id="Shi-NX-NBS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="84z-cK-FW4" userLabel="First Responder" sceneMemberID="firstResponder"/>

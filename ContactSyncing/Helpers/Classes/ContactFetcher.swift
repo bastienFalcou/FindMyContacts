@@ -22,10 +22,7 @@ final class ContactFetcher: NSObject {
 
 	override init() {
 		super.init()
-
 		self.syncContactsAction = Action(self.syncLocalAddressBook)
-
-		NotificationCenter.default.addObserver(self, selector: #selector(applicationWillEnterForeground(notification:)), name: .UIApplicationWillEnterForeground, object: nil)
 	}
 
 	func requestContactsPermission() {
@@ -75,12 +72,8 @@ final class ContactFetcher: NSObject {
 		}
 	}
 
-	fileprivate func updateAuthorizationStatusIfNeeded() {
+	func updateAuthorizationStatusIfNeeded() {
 		let authorizationStatus = CNContactStore.authorizationStatus(for: .contacts)
 		self.isContactsPermissionGranted.value = authorizationStatus == .authorized
-	}
-
-	@objc fileprivate func applicationWillEnterForeground(notification: Foundation.Notification) {
-		self.updateAuthorizationStatusIfNeeded()
 	}
 }

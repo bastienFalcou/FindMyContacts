@@ -106,9 +106,6 @@ extension Reactive where Base: UIControl {
 }
 
 extension Reactive where Base: UIBarButtonItem {
-	var isEnabled: BindingTarget<Bool> {
-		return target { $0.isEnabled = $1 }
-	}
 	var title: BindingTarget<String> {
 		return target { $0.title = $1 }
 	}

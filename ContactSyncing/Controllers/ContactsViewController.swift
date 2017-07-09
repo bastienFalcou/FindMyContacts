@@ -16,8 +16,9 @@ final class ContactsViewController: UIViewController {
 	static let noNewContactString = "No New Contact"
 	static let newContactString = "New Contact"
 
-	@IBOutlet fileprivate(set) var contingencyView: UIView!
-	@IBOutlet fileprivate(set) var contactsPermissionNotGrantedView: UIView!
+	@IBOutlet fileprivate var settingsBarButtonItem: UIBarButtonItem!
+	@IBOutlet fileprivate var contingencyView: UIView!
+	@IBOutlet fileprivate var contactsPermissionNotGrantedView: UIView!
 
 	var nonRefresingTitle: String {
 		let newContactsCount = UInt(self.tableViewController.syncedPhoneContacts.value.filter { !$0.hasBeenSeen }.count)
@@ -45,6 +46,7 @@ final class ContactsViewController: UIViewController {
 		).map { $0 || $1 || !$2 ? 0.0 : 1.0 }
 
 		self.disposable += self.contactsPermissionNotGrantedView.reactive.animatedAlpha <~ ContactFetcher.shared.isContactsPermissionGranted.map { $0 ? 0.0 : 1.0 }
+		self.disposable += self.settingsBarButtonItem.reactive.isEnabled <~ ContactFetcher.shared.isContactsPermissionGranted.producer
 	}
 
 	deinit {

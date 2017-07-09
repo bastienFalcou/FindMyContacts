@@ -13,6 +13,7 @@ import DataSource
 final class ContactsTableViewController: UITableViewController {
 	fileprivate let viewModel = ContactsTableViewModel()
 	fileprivate let tableDataSource = TableViewDataSource()
+	fileprivate let disposable = CompositeDisposable()
 
 	var syncedPhoneContacts: MutableProperty<Set<PhoneContact>> {
 		return self.viewModel.syncedPhoneContacts
@@ -39,8 +40,24 @@ final class ContactsTableViewController: UITableViewController {
 		self.refreshControl?.addTarget(self, action: #selector(handleRefresh(refreshControl:)), for: .valueChanged)
 
 		NotificationCenter.default.addObserver(self, selector: #selector(applicationWillEnterForeground(notification:)), name: .UIApplicationWillEnterForeground, object: nil)
+	}
 
-		self.viewModel.syncContacts()
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+
+		self.disposable += ContactFetcher.shared.isContactsPermissionGranted
+			.producer
+			.skipRepeats()
+			.startWithValues { [weak self] isPermissionGranted in
+				if isPermissionGranted {
+					self?.forceDisplayRefreshControl()
+					self?.viewModel.syncContacts()
+				}
+		}
+	}
+
+	deinit {
+		self.disposable.dispose()
 	}
 
 	func syncContacts() {
@@ -53,7 +70,7 @@ final class ContactsTableViewController: UITableViewController {
 	@objc fileprivate func handleRefresh(refreshControl: UIRefreshControl) {
 		self.viewModel.syncContacts()
 	}
-	@objc fileprivate func applicationWillEnterForeground(notification: Foundation.Notification) {
+	@objc fileprivate func applicationWillEnterForeground(notification: Foundation.Notification) { 
 		if ContactFetcher.shared.isContactsPermissionGranted.value {
 			self.forceDisplayRefreshControl()
 			self.viewModel.syncContacts()
