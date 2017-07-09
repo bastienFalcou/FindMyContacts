@@ -18,7 +18,7 @@ final class ContactFetcher: NSObject {
 	private let phoneContactFetcher = PhoneContactFetcher()
 	var syncContactsAction: Action<Void, [PhoneContact], NSError>!
 
-	private let areContactsActive = MutableProperty(false)
+	let isContactsPermissionGranted = MutableProperty(false)
 
 	override init() {
 		super.init()
@@ -27,9 +27,9 @@ final class ContactFetcher: NSObject {
 
 	func requestContactsPermission() {
 		self.phoneContactFetcher.authorize(success: {
-			print("Contacts: access granted")
-		}) { error in
-			print("Contacts: access denied")
+			self.updateAuthorizationStatusIfNeeded()
+		}) { _ in
+			self.updateAuthorizationStatusIfNeeded()
 		}
 	}
 
@@ -51,7 +51,8 @@ final class ContactFetcher: NSObject {
 
 					do {
 						backgroundRealm.add(contactEntities)
-						try	backgroundRealm.commitWrite()
+						try backgroundRealm.commitWrite()
+						try PhoneContact.substractObsoleteLocalContacts(with: Array(contactEntities), realm: backgroundRealm)
 
 						DispatchQueue.main.async {
 							RealmManager.shared.realm.refresh()
@@ -69,5 +70,10 @@ final class ContactFetcher: NSObject {
 				sink.send(error: error)
 			}
 		}
+	}
+
+	func updateAuthorizationStatusIfNeeded() {
+		let authorizationStatus = CNContactStore.authorizationStatus(for: .contacts)
+		self.isContactsPermissionGranted.value = authorizationStatus == .authorized
 	}
 }

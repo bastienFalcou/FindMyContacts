@@ -18,6 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
 
 	func applicationWillTerminate(_ application: UIApplication) {
-		PhoneContact.markAllAsRead()
+		PhoneContact.markAsAllSeen()
 	}
 }

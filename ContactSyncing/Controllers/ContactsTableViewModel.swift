@@ -11,14 +11,14 @@ import Result
 import DataSource
 import ReactiveSwift
 
-final class EntranceViewModel: NSObject {
+final class ContactsTableViewModel: NSObject {
 	var dataSource = MutableProperty<DataSource>(EmptyDataSource())
-	let disposable = CompositeDisposable()
+	private let disposable = CompositeDisposable()
 
 	let syncedPhoneContacts = MutableProperty<Set<PhoneContact>>([])
 	let isSyncing = MutableProperty(false)
 
-	let syncingWaitForMinimumDelayAction = Action<Void, Void, NoError> {
+	private let syncingWaitForMinimumDelayAction = Action<Void, Void, NoError> {
 		return SignalProducer { observer, disposable in
 			disposable += schedule(after: 1.0) {
 				observer.send(value: ())
@@ -44,6 +44,7 @@ final class EntranceViewModel: NSObject {
 		self.syncingWaitForMinimumDelayAction.apply().start()
 		self.disposable += ContactFetcher.shared.syncContactsAction.apply().startWithResult { [weak self] result in
 			if let syncedContacts = result.value {
+				self?.syncedPhoneContacts.value.removeAll()
 				syncedContacts.forEach { self?.syncedPhoneContacts.value.insert($0) }
 				self?.updateDataSource()
 			}
@@ -54,7 +55,7 @@ final class EntranceViewModel: NSObject {
 		do {
 			try RealmManager.shared.realm.write {
 				RealmManager.shared.realm.delete(RealmManager.shared.realm.objects(PhoneContact.self))
-				self.syncedPhoneContacts.value = Set(PhoneContact.allPhoneContacts())
+				self.syncedPhoneContacts.value.removeAll()
 				self.updateDataSource()
 			}
 		} catch {
@@ -63,11 +64,17 @@ final class EntranceViewModel: NSObject {
 	}
 
 	fileprivate func updateDataSource() {
-		let sections: [DataSourceSection<ContactTableViewCellModel>] = self.syncedPhoneContacts.value
+		let existingContacts = self.syncedPhoneContacts.value.filter { !$0.hasBeenSeen }
+		var sections: [DataSourceSection<ContactTableViewCellModel>] = existingContacts
 			.splitBetween {
 				return floor($0.0.dateAdded.timeIntervalSince1970 / (60 * 60 * 24)) != floor($0.1.dateAdded.timeIntervalSince1970 / (60 * 60 * 24))
 			}.map { contacts in
 				return DataSourceSection(items: contacts.map { ContactTableViewCellModel(contact: $0) })
+		}
+
+		let newContacts = self.syncedPhoneContacts.value.filter { $0.hasBeenSeen }
+		if !newContacts.isEmpty {
+			sections.append(DataSourceSection(items: newContacts.map { ContactTableViewCellModel(contact: $0) }))
 		}
 		self.dataSource.value = StaticDataSource(sections: sections)
 	}

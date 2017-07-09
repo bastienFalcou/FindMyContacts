@@ -59,6 +59,14 @@ extension Reactive where Base: UIView {
 	var borderWidth: BindingTarget<CGFloat> {
 		return target { $0.layer.borderWidth = $1 }
 	}
+
+	var animatedAlpha: BindingTarget<Float> {
+		return target { view, alpha in
+			UIView.animate(withDuration: 0.3) {
+				view.alpha = CGFloat(alpha)
+			}
+		}
+	}
 }
 
 extension Reactive where Base: UILabel {
@@ -98,9 +106,6 @@ extension Reactive where Base: UIControl {
 }
 
 extension Reactive where Base: UIBarButtonItem {
-	var isEnabled: BindingTarget<Bool> {
-		return target { $0.isEnabled = $1 }
-	}
 	var title: BindingTarget<String> {
 		return target { $0.title = $1 }
 	}
