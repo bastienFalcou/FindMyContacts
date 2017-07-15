@@ -18,6 +18,7 @@ final class ContactsViewController: UIViewController {
 
 	@IBOutlet fileprivate var settingsBarButtonItem: UIBarButtonItem!
 	@IBOutlet fileprivate var contingencyView: UIView!
+	@IBOutlet fileprivate var contingencyViewTapGestureRecognizer: UITapGestureRecognizer!
 	@IBOutlet fileprivate var contactsPermissionNotGrantedView: UIView!
 
 	var nonRefresingTitle: String {
@@ -44,6 +45,11 @@ final class ContactsViewController: UIViewController {
 			self.tableViewController.isSyncing.producer,
 			ContactFetcher.shared.isContactsPermissionGranted.producer
 		).map { $0 || $1 || !$2 ? 0.0 : 1.0 }
+
+		self.disposable += self.contingencyViewTapGestureRecognizer.reactive.isEnabled <~ SignalProducer.combineLatest(
+			self.tableViewController.syncedPhoneContacts.producer.map { $0.isEmpty },
+			ContactFetcher.shared.isContactsPermissionGranted.producer
+		).map { $0 && $1 }
 
 		self.disposable += self.contactsPermissionNotGrantedView.reactive.animatedAlpha <~ ContactFetcher.shared.isContactsPermissionGranted.map { $0 ? 0.0 : 1.0 }
 		self.disposable += self.settingsBarButtonItem.reactive.isEnabled <~ ContactFetcher.shared.isContactsPermissionGranted.producer
