@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		0C05361F1F0BC991005FFC83 /* SequenceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C05361E1F0BC991005FFC83 /* SequenceExtensions.swift */; };
 		0C0536211F0BCBA9005FFC83 /* ContactTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0536201F0BCBA9005FFC83 /* ContactTableHeaderView.swift */; };
-		0C0536251F0BCEA2005FFC83 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0536241F0BCEA2005FFC83 /* FoundationExtensions.swift */; };
-		0C0536271F0BD0FD005FFC83 /* ContactTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C0536261F0BD0FD005FFC83 /* ContactTableHeaderView.xib */; };
 		0C20DDDD1F1A6ECB002643B5 /* PushNotificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C20DDDC1F1A6ECB002643B5 /* PushNotificationCoordinator.swift */; };
 		0C262E221F126E8A006688DF /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C262E211F126E8A006688DF /* ContactsViewController.swift */; };
 		0C4BAB561F110EA8000EC585 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4A1F110E87000EC585 /* CocoaLumberjack.framework */; };
@@ -38,6 +36,8 @@
 		0C5417071EB3A22F00E1DBBE /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416EA1EB3A21200E1DBBE /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0C5417081EB3A22F00E1DBBE /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416EB1EB3A21200E1DBBE /* Result.framework */; };
 		0C5417091EB3A22F00E1DBBE /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416EB1EB3A21200E1DBBE /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C5965091F1AA0C300BEF4E8 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5965081F1AA0C300BEF4E8 /* FoundationExtensions.swift */; };
+		0C59650B1F1AA0D400BEF4E8 /* ContactTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C59650A1F1AA0D400BEF4E8 /* ContactTableHeaderView.xib */; };
 		0C6638C21E1FF61F003C1008 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6638C11E1FF61F003C1008 /* ContactsTableViewController.swift */; };
 		0C6638C51E1FF63C003C1008 /* PhoneContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6638C41E1FF63C003C1008 /* PhoneContact.swift */; };
 		0C6638CC1E1FFFB9003C1008 /* ContactFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6638CB1E1FFFB9003C1008 /* ContactFetcher.swift */; };
@@ -105,8 +105,6 @@
 /* Begin PBXFileReference section */
 		0C05361E1F0BC991005FFC83 /* SequenceExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SequenceExtensions.swift; path = Helpers/Extensions/SequenceExtensions.swift; sourceTree = "<group>"; };
 		0C0536201F0BCBA9005FFC83 /* ContactTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableHeaderView.swift; path = Views/ContactTableHeaderView.swift; sourceTree = "<group>"; };
-		0C0536241F0BCEA2005FFC83 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
-		0C0536261F0BD0FD005FFC83 /* ContactTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactTableHeaderView.xib; sourceTree = "<group>"; };
 		0C20DDDC1F1A6ECB002643B5 /* PushNotificationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushNotificationCoordinator.swift; path = Helpers/Classes/PushNotificationCoordinator.swift; sourceTree = "<group>"; };
 		0C262E211F126E8A006688DF /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsViewController.swift; path = Controllers/ContactsViewController.swift; sourceTree = "<group>"; };
 		0C4BAB4A1F110E87000EC585 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/CocoaLumberjack.framework"; sourceTree = "<group>"; };
@@ -122,6 +120,8 @@
 		0C5416E91EB3A21200E1DBBE /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/ReactiveCocoa.framework"; sourceTree = "<group>"; };
 		0C5416EA1EB3A21200E1DBBE /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/ReactiveSwift.framework"; sourceTree = "<group>"; };
 		0C5416EB1EB3A21200E1DBBE /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/Result.framework"; sourceTree = "<group>"; };
+		0C5965081F1AA0C300BEF4E8 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoundationExtensions.swift; path = Helpers/Extensions/FoundationExtensions.swift; sourceTree = "<group>"; };
+		0C59650A1F1AA0D400BEF4E8 /* ContactTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContactTableHeaderView.xib; path = Views/ContactTableHeaderView.xib; sourceTree = "<group>"; };
 		0C6638981E1FEA48003C1008 /* DataSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DataSource.framework; sourceTree = WORKSPACE_FRAMEWORK_BUILT_PRODUCTS_DIR; };
 		0C6638991E1FEA48003C1008 /* EthanolContacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolContacts.framework; sourceTree = WORKSPACE_FRAMEWORK_BUILT_PRODUCTS_DIR; };
 		0C66389A1E1FEA48003C1008 /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUtilities.framework; sourceTree = WORKSPACE_FRAMEWORK_BUILT_PRODUCTS_DIR; };
@@ -278,7 +278,7 @@
 			children = (
 				0C69A72F1E2509EC005A22B5 /* ContactTableViewCell.swift */,
 				0C69A7311E250A05005A22B5 /* ContactTableViewCellModel.swift */,
-				0C0536261F0BD0FD005FFC83 /* ContactTableHeaderView.xib */,
+				0C59650A1F1AA0D400BEF4E8 /* ContactTableHeaderView.xib */,
 				0C0536201F0BCBA9005FFC83 /* ContactTableHeaderView.swift */,
 			);
 			name = Views;
@@ -319,7 +319,7 @@
 			children = (
 				0C69A7331E251200005A22B5 /* RACExtensions.swift */,
 				0C69A7341E251200005A22B5 /* RACTerminal.swift */,
-				0C0536241F0BCEA2005FFC83 /* FoundationExtensions.swift */,
+				0C5965081F1AA0C300BEF4E8 /* FoundationExtensions.swift */,
 				0C932E731F123C0800F1D88B /* UIKitExtensions.swift */,
 				0C05361E1F0BC991005FFC83 /* SequenceExtensions.swift */,
 				0C4BAB621F11ABFD000EC585 /* ReactiveSwiftExtensions.swift */,
@@ -522,7 +522,7 @@
 				0C9B5B581E1FA80F00F7EF7A /* LaunchScreen.storyboard in Resources */,
 				0C9B5B551E1FA80F00F7EF7A /* Assets.xcassets in Resources */,
 				0C9B5B531E1FA80F00F7EF7A /* Main.storyboard in Resources */,
-				0C0536271F0BD0FD005FFC83 /* ContactTableHeaderView.xib in Resources */,
+				0C59650B1F1AA0D400BEF4E8 /* ContactTableHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,10 +611,10 @@
 				0C69A7321E250A05005A22B5 /* ContactTableViewCellModel.swift in Sources */,
 				0C4BAB631F11ABFD000EC585 /* ReactiveSwiftExtensions.swift in Sources */,
 				0C69A7351E251200005A22B5 /* RACExtensions.swift in Sources */,
+				0C5965091F1AA0C300BEF4E8 /* FoundationExtensions.swift in Sources */,
 				0CDDB6861E27AA9D00BE8E7E /* Constants.swift in Sources */,
 				0C69A7361E251200005A22B5 /* RACTerminal.swift in Sources */,
 				0C6638CE1E200B3E003C1008 /* RealmManager.swift in Sources */,
-				0C0536251F0BCEA2005FFC83 /* FoundationExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
