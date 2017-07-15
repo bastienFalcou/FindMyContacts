@@ -10,13 +10,14 @@ import UIKit
 import NotificationCenter
 import EthanolContacts
 import ReactiveSwift
-import Result
+import DataSource
 
 class TodayViewController: UIViewController, NCWidgetProviding {
 	@IBOutlet private var newContactsLabel: UILabel!
 	@IBOutlet private var tableView: UITableView!
 
-	private let viewModel = TodayViewModel()
+	fileprivate let viewModel = TodayViewModel()
+	fileprivate let tableDataSource = TableViewDataSource()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -28,6 +29,15 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 		self.newContactsLabel.reactive.text <~ self.viewModel.syncedPhoneContacts.producer.map {
 			$0.isEmpty ? "No New Contact" : "\($0.count) New Contact\($0.count > 1 ? "s" : "")"
 		}
+
+		self.tableDataSource.reuseIdentifierForItem = { _ in
+			return ContactTableViewCellModel.reuseIdentifier
+		}
+
+		self.tableView.dataSource = self.tableDataSource
+
+		self.tableDataSource.tableView = self.tableView
+		self.tableDataSource.dataSource.innerDataSource <~ self.viewModel.dataSource
 	}
 
 	func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
@@ -37,7 +47,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 				self?.viewModel.syncedPhoneContacts.value.removeAll() // TODO: Test if needed given that set
 				syncedContacts.forEach { self?.viewModel.syncedPhoneContacts.value.insert($0) }
 
-				if self?.viewModel.syncedPhoneContacts.value.filter({ $0.hasBeenSeen }).isEmpty ?? true {
+				self?.viewModel.updateDataSource()
+
+				if self?.viewModel.syncedPhoneContacts.value.filter({ !$0.hasBeenSeen }).isEmpty ?? true {
 					completionHandler(.noData)
 				} else {
 					completionHandler(.newData)
@@ -51,5 +63,19 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 				syncedContacts.forEach { self?.viewModel.syncedPhoneContacts.value.insert($0) }
 			}
 		}
+	}
+}
+
+extension TodayViewController: UITableViewDelegate {
+	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+		let firstViewModel = self.tableDataSource.dataSource.item(at: IndexPath(row: 0, section: section)) as! ContactTableViewCellModel
+		let headerView = ContactTableHeaderView()
+		let text = firstViewModel.contact.hasBeenSeen ? firstViewModel.contact.dateAdded.readable : "new"
+		headerView.titleLabel?.text = text.uppercased()
+		return headerView
+	}
+
+	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+		return 28.0
 	}
 }
