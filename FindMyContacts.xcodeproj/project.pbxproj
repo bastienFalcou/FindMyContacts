@@ -11,6 +11,27 @@
 		0C0536211F0BCBA9005FFC83 /* ContactTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0536201F0BCBA9005FFC83 /* ContactTableHeaderView.swift */; };
 		0C20DDDD1F1A6ECB002643B5 /* PushNotificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C20DDDC1F1A6ECB002643B5 /* PushNotificationCoordinator.swift */; };
 		0C262E221F126E8A006688DF /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C262E211F126E8A006688DF /* ContactsViewController.swift */; };
+		0C3EFA941F1ACD0E00F81915 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3EFA931F1ACD0E00F81915 /* NotificationCenter.framework */; };
+		0C3EFA971F1ACD0E00F81915 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3EFA961F1ACD0E00F81915 /* TodayViewController.swift */; };
+		0C3EFA9A1F1ACD0E00F81915 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C3EFA981F1ACD0E00F81915 /* MainInterface.storyboard */; };
+		0C3EFA9E1F1ACD0E00F81915 /* Missed Contacts Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0C3EFA921F1ACD0E00F81915 /* Missed Contacts Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0C3EFAA31F1AD03E00F81915 /* ContactFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6638CB1E1FFFB9003C1008 /* ContactFetcher.swift */; };
+		0C3EFAA61F1AD18600F81915 /* DataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416E61EB3A21200E1DBBE /* DataSource.framework */; };
+		0C3EFAA71F1AD18600F81915 /* EthanolContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416E71EB3A21200E1DBBE /* EthanolContacts.framework */; };
+		0C3EFAA81F1AD18600F81915 /* EthanolTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4B1F110E87000EC585 /* EthanolTools.framework */; };
+		0C3EFAA91F1AD18600F81915 /* EthanolUIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4C1F110E87000EC585 /* EthanolUIComponents.framework */; };
+		0C3EFAAA1F1AD18600F81915 /* EthanolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416E81EB3A21200E1DBBE /* EthanolUtilities.framework */; };
+		0C3EFAAB1F1AD18600F81915 /* EthanolValidationFormatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4D1F110E87000EC585 /* EthanolValidationFormatting.framework */; };
+		0C3EFAAC1F1AD18600F81915 /* libPhoneNumberiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4E1F110E87000EC585 /* libPhoneNumberiOS.framework */; };
+		0C3EFAAD1F1AD18600F81915 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416E91EB3A21200E1DBBE /* ReactiveCocoa.framework */; };
+		0C3EFAAE1F1AD18600F81915 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416EA1EB3A21200E1DBBE /* ReactiveSwift.framework */; };
+		0C3EFAAF1F1AD18600F81915 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416EB1EB3A21200E1DBBE /* Result.framework */; };
+		0C3EFAB41F1AD36600F81915 /* PhoneContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6638C41E1FF63C003C1008 /* PhoneContact.swift */; };
+		0C3EFAB61F1AD38D00F81915 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3EFAB51F1AD38D00F81915 /* TodayViewModel.swift */; };
+		0C3EFAB71F1AD61C00F81915 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6638CD1E200B3E003C1008 /* RealmManager.swift */; };
+		0C3EFAB81F1AD62800F81915 /* PhoneContact+Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDB68B1E27ECB600BE8E7E /* PhoneContact+Sync.swift */; };
+		0C3EFAB91F1AD62F00F81915 /* SyncProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDB6871E27EB7600BE8E7E /* SyncProtocol.swift */; };
+		0C3EFABA1F1AD6A800F81915 /* RACTerminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69A7341E251200005A22B5 /* RACTerminal.swift */; };
 		0C4BAB561F110EA8000EC585 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4A1F110E87000EC585 /* CocoaLumberjack.framework */; };
 		0C4BAB571F110EA8000EC585 /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4A1F110E87000EC585 /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0C4BAB581F110EA8000EC585 /* EthanolTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4B1F110E87000EC585 /* EthanolTools.framework */; };
@@ -58,9 +79,17 @@
 		0CDDB6881E27EB7600BE8E7E /* SyncProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDB6871E27EB7600BE8E7E /* SyncProtocol.swift */; };
 		0CDDB68C1E27ECB600BE8E7E /* PhoneContact+Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDB68B1E27ECB600BE8E7E /* PhoneContact+Sync.swift */; };
 		5D1CBB02C1142D2B4E02B6B7 /* Pods_FindMyContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E837C7E8168C1886ED0028 /* Pods_FindMyContacts.framework */; };
+		C78D671BDD3A5A89E47F1927 /* Pods_Missed_Contacts_Widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BFC83135E093D28DA284F3 /* Pods_Missed_Contacts_Widget.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0C3EFA9C1F1ACD0E00F81915 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C9B5B421E1FA80F00F7EF7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C3EFA911F1ACD0E00F81915;
+			remoteInfo = "Missed Contacts Widget";
+		};
 		0C9B5B5F1E1FA81000F7EF7A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0C9B5B421E1FA80F00F7EF7A /* Project object */;
@@ -78,6 +107,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		0C3EFAA21F1ACD0E00F81915 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0C3EFA9E1F1ACD0E00F81915 /* Missed Contacts Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0C54170C1EB3A22F00E1DBBE /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -107,6 +147,14 @@
 		0C0536201F0BCBA9005FFC83 /* ContactTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableHeaderView.swift; path = Views/ContactTableHeaderView.swift; sourceTree = "<group>"; };
 		0C20DDDC1F1A6ECB002643B5 /* PushNotificationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushNotificationCoordinator.swift; path = Helpers/Classes/PushNotificationCoordinator.swift; sourceTree = "<group>"; };
 		0C262E211F126E8A006688DF /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsViewController.swift; path = Controllers/ContactsViewController.swift; sourceTree = "<group>"; };
+		0C3EFA921F1ACD0E00F81915 /* Missed Contacts Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Missed Contacts Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C3EFA931F1ACD0E00F81915 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		0C3EFA961F1ACD0E00F81915 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		0C3EFA991F1ACD0E00F81915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		0C3EFA9B1F1ACD0E00F81915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C3EFAB01F1AD18700F81915 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/Realm/Realm.framework"; sourceTree = "<group>"; };
+		0C3EFAB11F1AD18700F81915 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
+		0C3EFAB51F1AD38D00F81915 /* TodayViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
 		0C4BAB4A1F110E87000EC585 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/CocoaLumberjack.framework"; sourceTree = "<group>"; };
 		0C4BAB4B1F110E87000EC585 /* EthanolTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolTools.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/EthanolTools.framework"; sourceTree = "<group>"; };
 		0C4BAB4C1F110E87000EC585 /* EthanolUIComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolUIComponents.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/EthanolUIComponents.framework"; sourceTree = "<group>"; };
@@ -169,13 +217,35 @@
 		0CDDB68B1E27ECB600BE8E7E /* PhoneContact+Sync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PhoneContact+Sync.swift"; path = "Models/Sync/PhoneContact+Sync.swift"; sourceTree = "<group>"; };
 		16A7AABA1B7E5FFB287F140B /* Pods-ContactSyncing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactSyncing.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContactSyncing/Pods-ContactSyncing.release.xcconfig"; sourceTree = "<group>"; };
 		2CA7D95A5F8662EB27B0B837 /* Pods-ContactSyncing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactSyncing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContactSyncing/Pods-ContactSyncing.debug.xcconfig"; sourceTree = "<group>"; };
+		4FD85B55EA01113C67D75C21 /* Pods-Missed Contacts Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Missed Contacts Widget.release.xcconfig"; path = "Pods/Target Support Files/Pods-Missed Contacts Widget/Pods-Missed Contacts Widget.release.xcconfig"; sourceTree = "<group>"; };
+		85BFC83135E093D28DA284F3 /* Pods_Missed_Contacts_Widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Missed_Contacts_Widget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E837C7E8168C1886ED0028 /* Pods_FindMyContacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyContacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A54714EC1042B9FD3596201A /* Pods-Missed Contacts Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Missed Contacts Widget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Missed Contacts Widget/Pods-Missed Contacts Widget.debug.xcconfig"; sourceTree = "<group>"; };
 		ABB3D5B562B9BA95AF69E378 /* Pods_ContactSyncing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactSyncing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB8E4CF4117E00F06573E40 /* Pods-FindMyContacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyContacts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyContacts/Pods-FindMyContacts.debug.xcconfig"; sourceTree = "<group>"; };
 		FADF6B8F762AEEB7FEEF6756 /* Pods-FindMyContacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyContacts.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyContacts/Pods-FindMyContacts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0C3EFA8F1F1ACD0E00F81915 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C3EFAA61F1AD18600F81915 /* DataSource.framework in Frameworks */,
+				0C3EFAA71F1AD18600F81915 /* EthanolContacts.framework in Frameworks */,
+				0C3EFAA81F1AD18600F81915 /* EthanolTools.framework in Frameworks */,
+				0C3EFAA91F1AD18600F81915 /* EthanolUIComponents.framework in Frameworks */,
+				0C3EFAAA1F1AD18600F81915 /* EthanolUtilities.framework in Frameworks */,
+				0C3EFAAB1F1AD18600F81915 /* EthanolValidationFormatting.framework in Frameworks */,
+				0C3EFAAC1F1AD18600F81915 /* libPhoneNumberiOS.framework in Frameworks */,
+				0C3EFAAD1F1AD18600F81915 /* ReactiveCocoa.framework in Frameworks */,
+				0C3EFAAE1F1AD18600F81915 /* ReactiveSwift.framework in Frameworks */,
+				0C3EFAAF1F1AD18600F81915 /* Result.framework in Frameworks */,
+				0C3EFA941F1ACD0E00F81915 /* NotificationCenter.framework in Frameworks */,
+				C78D671BDD3A5A89E47F1927 /* Pods_Missed_Contacts_Widget.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0C9B5B471E1FA80F00F7EF7A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,6 +286,8 @@
 		0C1BE5501E1FB4C00030BFF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C3EFAB01F1AD18700F81915 /* Realm.framework */,
+				0C3EFAB11F1AD18700F81915 /* RealmSwift.framework */,
 				0C4BAB4A1F110E87000EC585 /* CocoaLumberjack.framework */,
 				0C4BAB4B1F110E87000EC585 /* EthanolTools.framework */,
 				0C4BAB4C1F110E87000EC585 /* EthanolUIComponents.framework */,
@@ -250,8 +322,21 @@
 				0C66389D1E1FEA48003C1008 /* Result.framework */,
 				ABB3D5B562B9BA95AF69E378 /* Pods_ContactSyncing.framework */,
 				88E837C7E8168C1886ED0028 /* Pods_FindMyContacts.framework */,
+				0C3EFA931F1ACD0E00F81915 /* NotificationCenter.framework */,
+				85BFC83135E093D28DA284F3 /* Pods_Missed_Contacts_Widget.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0C3EFA951F1ACD0E00F81915 /* Missed Contacts Widget */ = {
+			isa = PBXGroup;
+			children = (
+				0C3EFA961F1ACD0E00F81915 /* TodayViewController.swift */,
+				0C3EFAB51F1AD38D00F81915 /* TodayViewModel.swift */,
+				0C3EFA981F1ACD0E00F81915 /* MainInterface.storyboard */,
+				0C3EFA9B1F1ACD0E00F81915 /* Info.plist */,
+			);
+			path = "Missed Contacts Widget";
 			sourceTree = "<group>";
 		};
 		0C6638BD1E1FF501003C1008 /* Model */ = {
@@ -342,6 +427,7 @@
 				0C9B5B4C1E1FA80F00F7EF7A /* FindMyContacts */,
 				0C9B5B611E1FA81000F7EF7A /* FindMyContactsTests */,
 				0C9B5B6C1E1FA81000F7EF7A /* FindMyContactsUITests */,
+				0C3EFA951F1ACD0E00F81915 /* Missed Contacts Widget */,
 				0C9B5B4B1E1FA80F00F7EF7A /* Products */,
 				0C1BE5501E1FB4C00030BFF9 /* Frameworks */,
 				43353BFFFE91ED54C1952FA6 /* Pods */,
@@ -354,6 +440,7 @@
 				0C9B5B4A1E1FA80F00F7EF7A /* FindMyContacts.app */,
 				0C9B5B5E1E1FA81000F7EF7A /* FindMyContactsTests.xctest */,
 				0C9B5B691E1FA81000F7EF7A /* FindMyContactsUITests.xctest */,
+				0C3EFA921F1ACD0E00F81915 /* Missed Contacts Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -400,6 +487,8 @@
 				16A7AABA1B7E5FFB287F140B /* Pods-ContactSyncing.release.xcconfig */,
 				BBB8E4CF4117E00F06573E40 /* Pods-FindMyContacts.debug.xcconfig */,
 				FADF6B8F762AEEB7FEEF6756 /* Pods-FindMyContacts.release.xcconfig */,
+				A54714EC1042B9FD3596201A /* Pods-Missed Contacts Widget.debug.xcconfig */,
+				4FD85B55EA01113C67D75C21 /* Pods-Missed Contacts Widget.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -407,6 +496,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0C3EFA911F1ACD0E00F81915 /* Missed Contacts Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C3EFAA11F1ACD0E00F81915 /* Build configuration list for PBXNativeTarget "Missed Contacts Widget" */;
+			buildPhases = (
+				227ED7963658A3E4362FA087 /* [CP] Check Pods Manifest.lock */,
+				0C3EFA8E1F1ACD0E00F81915 /* Sources */,
+				0C3EFA8F1F1ACD0E00F81915 /* Frameworks */,
+				0C3EFA901F1ACD0E00F81915 /* Resources */,
+				B1A4517E7BF19D8391EC0F6A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Missed Contacts Widget";
+			productName = "Missed Contacts Widget";
+			productReference = 0C3EFA921F1ACD0E00F81915 /* Missed Contacts Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		0C9B5B491E1FA80F00F7EF7A /* FindMyContacts */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C9B5B721E1FA81000F7EF7A /* Build configuration list for PBXNativeTarget "FindMyContacts" */;
@@ -418,10 +526,12 @@
 				6FC25CCDC275AD61E5F00E3F /* [CP] Embed Pods Frameworks */,
 				1774BF807C62049C45EE94B3 /* [CP] Copy Pods Resources */,
 				0C54170C1EB3A22F00E1DBBE /* Embed Frameworks */,
+				0C3EFAA21F1ACD0E00F81915 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0C3EFA9D1F1ACD0E00F81915 /* PBXTargetDependency */,
 			);
 			name = FindMyContacts;
 			productName = ContactSyncing;
@@ -470,10 +580,15 @@
 		0C9B5B421E1FA80F00F7EF7A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Bastien Falcou";
 				TargetAttributes = {
+					0C3EFA911F1ACD0E00F81915 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 975YEVYX95;
+						ProvisioningStyle = Automatic;
+					};
 					0C9B5B491E1FA80F00F7EF7A = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 975YEVYX95;
@@ -510,11 +625,20 @@
 				0C9B5B491E1FA80F00F7EF7A /* FindMyContacts */,
 				0C9B5B5D1E1FA81000F7EF7A /* FindMyContactsTests */,
 				0C9B5B681E1FA81000F7EF7A /* FindMyContactsUITests */,
+				0C3EFA911F1ACD0E00F81915 /* Missed Contacts Widget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0C3EFA901F1ACD0E00F81915 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C3EFA9A1F1ACD0E00F81915 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0C9B5B481E1FA80F00F7EF7A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -573,6 +697,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FindMyContacts/Pods-FindMyContacts-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		227ED7963658A3E4362FA087 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		6FC25CCDC275AD61E5F00E3F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -588,9 +727,39 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FindMyContacts/Pods-FindMyContacts-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B1A4517E7BF19D8391EC0F6A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Missed Contacts Widget/Pods-Missed Contacts Widget-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0C3EFA8E1F1ACD0E00F81915 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C3EFAB61F1AD38D00F81915 /* TodayViewModel.swift in Sources */,
+				0C3EFAA31F1AD03E00F81915 /* ContactFetcher.swift in Sources */,
+				0C3EFAB91F1AD62F00F81915 /* SyncProtocol.swift in Sources */,
+				0C3EFAB81F1AD62800F81915 /* PhoneContact+Sync.swift in Sources */,
+				0C3EFAB71F1AD61C00F81915 /* RealmManager.swift in Sources */,
+				0C3EFA971F1ACD0E00F81915 /* TodayViewController.swift in Sources */,
+				0C3EFABA1F1AD6A800F81915 /* RACTerminal.swift in Sources */,
+				0C3EFAB41F1AD36600F81915 /* PhoneContact.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0C9B5B461E1FA80F00F7EF7A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -637,6 +806,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0C3EFA9D1F1ACD0E00F81915 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C3EFA911F1ACD0E00F81915 /* Missed Contacts Widget */;
+			targetProxy = 0C3EFA9C1F1ACD0E00F81915 /* PBXContainerItemProxy */;
+		};
 		0C9B5B601E1FA81000F7EF7A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0C9B5B491E1FA80F00F7EF7A /* FindMyContacts */;
@@ -650,6 +824,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0C3EFA981F1ACD0E00F81915 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C3EFA991F1ACD0E00F81915 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		0C9B5B511E1FA80F00F7EF7A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -669,6 +851,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0C3EFA9F1F1ACD0E00F81915 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A54714EC1042B9FD3596201A /* Pods-Missed Contacts Widget.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = 975YEVYX95;
+				INFOPLIST_FILE = "Missed Contacts Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "bastienFalcou.FindMyContacts.Missed-Contacts-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0C3EFAA01F1ACD0E00F81915 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FD85B55EA01113C67D75C21 /* Pods-Missed Contacts Widget.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = 975YEVYX95;
+				INFOPLIST_FILE = "Missed Contacts Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "bastienFalcou.FindMyContacts.Missed-Contacts-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		0C9B5B701E1FA81000F7EF7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -768,6 +982,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BBB8E4CF4117E00F06573E40 /* Pods-FindMyContacts.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 975YEVYX95;
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
@@ -783,6 +998,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FADF6B8F762AEEB7FEEF6756 /* Pods-FindMyContacts.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 975YEVYX95;
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
@@ -855,6 +1071,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0C3EFAA11F1ACD0E00F81915 /* Build configuration list for PBXNativeTarget "Missed Contacts Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C3EFA9F1F1ACD0E00F81915 /* Debug */,
+				0C3EFAA01F1ACD0E00F81915 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0C9B5B451E1FA80F00F7EF7A /* Build configuration list for PBXProject "FindMyContacts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

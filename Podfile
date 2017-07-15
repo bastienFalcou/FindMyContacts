@@ -4,7 +4,11 @@ platform :ios, "9.0"
 inhibit_all_warnings!
 use_frameworks!
 
-target :FindMyContacts do
+target 'FindMyContacts' do
+	pod 'RealmSwift'
+end
+
+target 'Missed Contacts Widget' do
 	pod 'RealmSwift'
 end
 

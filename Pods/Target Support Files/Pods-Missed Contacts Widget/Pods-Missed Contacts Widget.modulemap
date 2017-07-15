@@ -1,0 +1,6 @@
+framework module Pods_Missed_Contacts_Widget {
+  umbrella header "Pods-Missed Contacts Widget-umbrella.h"
+
+  export *
+  module * { export * }
+}
