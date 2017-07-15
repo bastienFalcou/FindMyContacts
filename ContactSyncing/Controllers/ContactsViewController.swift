@@ -39,22 +39,24 @@ final class ContactsViewController: UIViewController {
 
 		ContactFetcher.shared.requestContactsPermission()
 
+		let isContactsPermissionGrantedProducer = ContactFetcher.shared.isContactsPermissionGranted.producer.skip(first: 1)
+
 		self.reactive.title <~ self.tableViewController.isSyncing.map { $0 ? "Refreshing Contacts" : self.nonRefresingTitle }
 
 		self.disposable += self.contingencyView.reactive.animatedAlpha <~ SignalProducer.combineLatest(
 			self.tableViewController.syncedPhoneContacts.producer.map { !$0.isEmpty },
 			self.tableViewController.isSyncing.producer,
-			ContactFetcher.shared.isContactsPermissionGranted.producer
+			isContactsPermissionGrantedProducer
 		).map { $0 || $1 || !$2 ? 0.0 : 1.0 }
 
 		self.disposable += self.contingencyViewTapGestureRecognizer.reactive.isEnabled <~ SignalProducer.combineLatest(
 			self.tableViewController.syncedPhoneContacts.producer.map { $0.isEmpty },
-			ContactFetcher.shared.isContactsPermissionGranted.producer
+			isContactsPermissionGrantedProducer
 		).map { $0 && $1 }
 
-		self.disposable += self.contactsPermissionNotGrantedTapGestureRecognizer.reactive.isEnabled <~ ContactFetcher.shared.isContactsPermissionGranted.negate()
-		self.disposable += self.contactsPermissionNotGrantedView.reactive.animatedAlpha <~ ContactFetcher.shared.isContactsPermissionGranted.map { $0 ? 0.0 : 1.0 }
-		self.disposable += self.settingsBarButtonItem.reactive.isEnabled <~ ContactFetcher.shared.isContactsPermissionGranted.producer
+		self.disposable += self.contactsPermissionNotGrantedTapGestureRecognizer.reactive.isEnabled <~ isContactsPermissionGrantedProducer.negate()
+		self.disposable += self.contactsPermissionNotGrantedView.reactive.animatedAlpha <~ isContactsPermissionGrantedProducer.map { $0 ? 0.0 : 1.0 }
+		self.disposable += self.settingsBarButtonItem.reactive.isEnabled <~ isContactsPermissionGrantedProducer
 
 		DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
 			PushNotificationCoordinator.scheduleLocalNotifications()
