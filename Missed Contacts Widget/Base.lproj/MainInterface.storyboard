@@ -22,13 +22,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 New Contacts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZL0-Wo-5h2">
-                                <rect key="frame" x="98.5" y="10" width="123" height="21"/>
+                                <rect key="frame" x="98.5" y="9" width="123" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nTZ-3B-WRi">
-                                <rect key="frame" x="0.0" y="41" width="320" height="259"/>
+                                <rect key="frame" x="0.0" y="39" width="320" height="261"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactTableViewCell" rowHeight="42" id="4Df-w6-8Bm" customClass="ContactTableViewCell" customModule="Missed_Contacts_Widget" customModuleProvider="target">
@@ -74,11 +74,11 @@
                             </tableView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="nTZ-3B-WRi" firstAttribute="top" secondItem="ZL0-Wo-5h2" secondAttribute="bottom" constant="10" id="8Kv-pn-5qE"/>
+                            <constraint firstItem="nTZ-3B-WRi" firstAttribute="top" secondItem="ZL0-Wo-5h2" secondAttribute="bottom" constant="9" id="8Kv-pn-5qE"/>
                             <constraint firstItem="nTZ-3B-WRi" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="98s-1l-LWq"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZL0-Wo-5h2" secondAttribute="trailing" constant="20" id="TEq-mB-yln"/>
                             <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="nTZ-3B-WRi" secondAttribute="bottom" id="Xjx-oL-Sqm"/>
-                            <constraint firstItem="ZL0-Wo-5h2" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="10" id="YWH-jp-XK8"/>
+                            <constraint firstItem="ZL0-Wo-5h2" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="9" id="YWH-jp-XK8"/>
                             <constraint firstItem="ZL0-Wo-5h2" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="qmE-du-D44"/>
                             <constraint firstAttribute="trailing" secondItem="nTZ-3B-WRi" secondAttribute="trailing" id="wWg-kD-MhT"/>
                             <constraint firstItem="ZL0-Wo-5h2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="20" id="xER-Vd-CHs"/>

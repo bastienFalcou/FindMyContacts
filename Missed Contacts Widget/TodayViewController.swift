@@ -12,7 +12,7 @@ import EthanolContacts
 import ReactiveSwift
 import DataSource
 
-class TodayViewController: UIViewController, NCWidgetProviding {
+class TodayViewController: UIViewController {
 	@IBOutlet private var newContactsLabel: UILabel!
 	@IBOutlet private var tableView: UITableView!
 
@@ -21,6 +21,12 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+
+		if #available(iOSApplicationExtension 10.0, *) {
+			self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
+		} else {
+			// Fallback on earlier versions
+		}
 
 		if !ContactFetcher.shared.isContactsPermissionGranted.value {
 			self.newContactsLabel.text = "Access to Contacts not granted"
@@ -39,7 +45,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 		self.tableDataSource.tableView = self.tableView
 		self.tableDataSource.dataSource.innerDataSource <~ self.viewModel.dataSource
 	}
+}
 
+extension TodayViewController: NCWidgetProviding {
 	func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
 		ContactFetcher.shared.syncContactsAction.apply().startWithResult { [weak self] result in
 			switch result {
@@ -64,6 +72,15 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 			}
 		}
 	}
+
+	@available(iOSApplicationExtension 10.0, *)
+	func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
+		if activeDisplayMode == .expanded {
+			preferredContentSize = CGSize(width: 0.0, height: 330.0)
+		} else if activeDisplayMode == .compact {
+			preferredContentSize = maxSize
+		}
+	}
 }
 
 extension TodayViewController: UITableViewDelegate {
@@ -71,7 +88,10 @@ extension TodayViewController: UITableViewDelegate {
 		let firstViewModel = self.tableDataSource.dataSource.item(at: IndexPath(row: 0, section: section)) as! ContactTableViewCellModel
 		let headerView = ContactTableHeaderView()
 		let text = firstViewModel.contact.hasBeenSeen ? firstViewModel.contact.dateAdded.readable : "new"
+
 		headerView.titleLabel?.text = text.uppercased()
+		headerView.contentView.backgroundColor = headerView.contentView.backgroundColor?.withAlphaComponent(0.4)
+
 		return headerView
 	}
 
