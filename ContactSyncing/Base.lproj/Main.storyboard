@@ -111,10 +111,16 @@
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="PiE-0L-Exr"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your contact list is currently empty. Add new contacts to your phone or tap to refresh." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKe-J5-IwN">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKe-J5-IwN">
                                         <rect key="frame" x="0.0" y="148" width="334" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Your contact list is currently empty. Add new contacts to your phone or tap to refresh.">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -132,20 +138,51 @@
                                 </constraints>
                             </view>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qvt-5c-6ZE" userLabel="Contacts Permission Not Granted Container View">
-                                <rect key="frame" x="20" y="323" width="334" height="20.5"/>
+                                <rect key="frame" x="20" y="224" width="334" height="219"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The permission to access your contacts has not been granted. Go to your Settings to enable it and get the most out of the app!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZiR-R5-vLp">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZiR-R5-vLp">
+                                        <rect key="frame" x="0.0" y="158" width="334" height="20.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="The permission to access your contacts has not been granted.">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPw-Yc-Te9">
+                                        <rect key="frame" x="0.0" y="198.5" width="334" height="20.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Go to your Settings to enable it and get the most out of the app!">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Contact-Permission-Denied" translatesAutoresizingMaskIntoConstraints="NO" id="ggS-Ji-9Wb">
+                                        <rect key="frame" x="92" y="0.0" width="150" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ggS-Ji-9Wb" secondAttribute="height" multiplier="167:142" id="Yc6-mg-DVq"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="hbu-cT-vpc"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="ZiR-R5-vLp" secondAttribute="bottom" id="2pZ-Mt-5dc"/>
-                                    <constraint firstItem="ZiR-R5-vLp" firstAttribute="top" secondItem="qvt-5c-6ZE" secondAttribute="top" id="RKM-Fe-aKe"/>
+                                    <constraint firstItem="ggS-Ji-9Wb" firstAttribute="top" secondItem="qvt-5c-6ZE" secondAttribute="top" id="0lS-cR-Y6D"/>
+                                    <constraint firstItem="ggS-Ji-9Wb" firstAttribute="width" secondItem="ggS-Ji-9Wb" secondAttribute="height" multiplier="167:142" id="Gfo-2V-aOi"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZPw-Yc-Te9" secondAttribute="trailing" id="Mem-hc-NK3"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZPw-Yc-Te9" secondAttribute="bottom" id="cut-K8-2Fr"/>
                                     <constraint firstAttribute="trailing" secondItem="ZiR-R5-vLp" secondAttribute="trailing" id="is3-7s-7Cj"/>
+                                    <constraint firstItem="ZiR-R5-vLp" firstAttribute="top" secondItem="ggS-Ji-9Wb" secondAttribute="bottom" constant="30" id="n96-3D-dO0"/>
+                                    <constraint firstItem="ZPw-Yc-Te9" firstAttribute="leading" secondItem="qvt-5c-6ZE" secondAttribute="leading" id="shd-7W-xJy"/>
+                                    <constraint firstItem="ggS-Ji-9Wb" firstAttribute="centerX" secondItem="qvt-5c-6ZE" secondAttribute="centerX" id="vJs-kf-FFd"/>
+                                    <constraint firstItem="ZPw-Yc-Te9" firstAttribute="top" secondItem="ZiR-R5-vLp" secondAttribute="bottom" constant="20" id="vTZ-iN-Snb"/>
                                     <constraint firstItem="ZiR-R5-vLp" firstAttribute="leading" secondItem="qvt-5c-6ZE" secondAttribute="leading" id="zNR-jt-Gsi"/>
                                 </constraints>
                             </view>
@@ -212,6 +249,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Contact-Permission-Denied" width="283" height="283"/>
         <image name="No-Contact-Icon" width="284" height="284"/>
         <image name="Phone-Existing-Icon" width="300" height="300"/>
         <image name="Settings-Icon" width="22" height="22"/>
