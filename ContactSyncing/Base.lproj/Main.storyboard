@@ -155,7 +155,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPw-Yc-Te9">
                                         <rect key="frame" x="0.0" y="198.5" width="334" height="20.5"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Go to your Settings to enable it and get the most out of the app!">
+                                            <fragment content="Tap to access Settings and enable Contacts to get the most out of the app!">
                                                 <attributes>
                                                     <font key="NSFont" metaFont="system" size="17"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" tighteningFactorForTruncation="0.0"/>
@@ -173,6 +173,7 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="ggS-Ji-9Wb" firstAttribute="top" secondItem="qvt-5c-6ZE" secondAttribute="top" id="0lS-cR-Y6D"/>
                                     <constraint firstItem="ggS-Ji-9Wb" firstAttribute="width" secondItem="ggS-Ji-9Wb" secondAttribute="height" multiplier="167:142" id="Gfo-2V-aOi"/>
@@ -185,6 +186,9 @@
                                     <constraint firstItem="ZPw-Yc-Te9" firstAttribute="top" secondItem="ZiR-R5-vLp" secondAttribute="bottom" constant="20" id="vTZ-iN-Snb"/>
                                     <constraint firstItem="ZiR-R5-vLp" firstAttribute="leading" secondItem="qvt-5c-6ZE" secondAttribute="leading" id="zNR-jt-Gsi"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Kwu-il-4FO" appends="YES" id="waT-SU-T9R"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -214,6 +218,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="contactsPermissionNotGrantedTapGestureRecognizer" destination="Kwu-il-4FO" id="j1M-vH-05H"/>
                         <outlet property="contactsPermissionNotGrantedView" destination="qvt-5c-6ZE" id="rAD-5a-8aP"/>
                         <outlet property="contingencyView" destination="u5Z-0K-mTd" id="fSk-yd-quS"/>
                         <outlet property="contingencyViewTapGestureRecognizer" destination="mDA-g9-1BC" id="OoY-te-ATE"/>
@@ -224,6 +229,11 @@
                 <tapGestureRecognizer id="mDA-g9-1BC">
                     <connections>
                         <action selector="contingencyViewTapped:" destination="88j-Su-wuD" id="Po1-jH-7FC"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Kwu-il-4FO">
+                    <connections>
+                        <action selector="contactsPemissionNotGrantedViewTapped:" destination="88j-Su-wuD" id="8Af-sz-OVk"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

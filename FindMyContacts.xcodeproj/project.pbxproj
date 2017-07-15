@@ -11,6 +11,7 @@
 		0C0536211F0BCBA9005FFC83 /* ContactTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0536201F0BCBA9005FFC83 /* ContactTableHeaderView.swift */; };
 		0C0536251F0BCEA2005FFC83 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0536241F0BCEA2005FFC83 /* FoundationExtensions.swift */; };
 		0C0536271F0BD0FD005FFC83 /* ContactTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C0536261F0BD0FD005FFC83 /* ContactTableHeaderView.xib */; };
+		0C20DDDD1F1A6ECB002643B5 /* PushNotificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C20DDDC1F1A6ECB002643B5 /* PushNotificationCoordinator.swift */; };
 		0C262E221F126E8A006688DF /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C262E211F126E8A006688DF /* ContactsViewController.swift */; };
 		0C4BAB561F110EA8000EC585 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4A1F110E87000EC585 /* CocoaLumberjack.framework */; };
 		0C4BAB571F110EA8000EC585 /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAB4A1F110E87000EC585 /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -106,6 +107,7 @@
 		0C0536201F0BCBA9005FFC83 /* ContactTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableHeaderView.swift; path = Views/ContactTableHeaderView.swift; sourceTree = "<group>"; };
 		0C0536241F0BCEA2005FFC83 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 		0C0536261F0BD0FD005FFC83 /* ContactTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactTableHeaderView.xib; sourceTree = "<group>"; };
+		0C20DDDC1F1A6ECB002643B5 /* PushNotificationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushNotificationCoordinator.swift; path = Helpers/Classes/PushNotificationCoordinator.swift; sourceTree = "<group>"; };
 		0C262E211F126E8A006688DF /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsViewController.swift; path = Controllers/ContactsViewController.swift; sourceTree = "<group>"; };
 		0C4BAB4A1F110E87000EC585 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/CocoaLumberjack.framework"; sourceTree = "<group>"; };
 		0C4BAB4B1F110E87000EC585 /* EthanolTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolTools.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-bdskidxravbmdddzqhjbnpfdqgnl/Build/Products/Debug-iphoneos/EthanolTools.framework"; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 			children = (
 				0C6638CB1E1FFFB9003C1008 /* ContactFetcher.swift */,
 				0C6638CD1E200B3E003C1008 /* RealmManager.swift */,
+				0C20DDDC1F1A6ECB002643B5 /* PushNotificationCoordinator.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 			files = (
 				0CDDB68C1E27ECB600BE8E7E /* PhoneContact+Sync.swift in Sources */,
 				0C6638C21E1FF61F003C1008 /* ContactsTableViewController.swift in Sources */,
+				0C20DDDD1F1A6ECB002643B5 /* PushNotificationCoordinator.swift in Sources */,
 				0C932E741F123C0800F1D88B /* UIKitExtensions.swift in Sources */,
 				0C05361F1F0BC991005FFC83 /* SequenceExtensions.swift in Sources */,
 				0C6638CC1E1FFFB9003C1008 /* ContactFetcher.swift in Sources */,

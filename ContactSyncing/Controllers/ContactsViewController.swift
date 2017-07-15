@@ -20,6 +20,7 @@ final class ContactsViewController: UIViewController {
 	@IBOutlet fileprivate var contingencyView: UIView!
 	@IBOutlet fileprivate var contingencyViewTapGestureRecognizer: UITapGestureRecognizer!
 	@IBOutlet fileprivate var contactsPermissionNotGrantedView: UIView!
+	@IBOutlet fileprivate var contactsPermissionNotGrantedTapGestureRecognizer: UITapGestureRecognizer!
 
 	var nonRefresingTitle: String {
 		let newContactsCount = UInt(self.tableViewController.syncedPhoneContacts.value.filter { !$0.hasBeenSeen }.count)
@@ -51,8 +52,13 @@ final class ContactsViewController: UIViewController {
 			ContactFetcher.shared.isContactsPermissionGranted.producer
 		).map { $0 && $1 }
 
+		self.disposable += self.contactsPermissionNotGrantedTapGestureRecognizer.reactive.isEnabled <~ ContactFetcher.shared.isContactsPermissionGranted.negate()
 		self.disposable += self.contactsPermissionNotGrantedView.reactive.animatedAlpha <~ ContactFetcher.shared.isContactsPermissionGranted.map { $0 ? 0.0 : 1.0 }
 		self.disposable += self.settingsBarButtonItem.reactive.isEnabled <~ ContactFetcher.shared.isContactsPermissionGranted.producer
+
+		DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+			PushNotificationCoordinator.scheduleLocalNotifications()
+		}
 	}
 
 	deinit {
@@ -102,5 +108,12 @@ final class ContactsViewController: UIViewController {
 
 	@IBAction func contingencyViewTapped(_ sender: Any) {
 		self.tableViewController.syncContactsProgrammatically()
+	}
+
+	@IBAction func contactsPemissionNotGrantedViewTapped(_ sender: Any) {
+		guard let settingsUrl = URL(string: UIApplicationOpenSettingsURLString), UIApplication.shared.canOpenURL(settingsUrl) else {
+			return
+		}
+		UIApplication.shared.openURL(settingsUrl)
 	}
 }
