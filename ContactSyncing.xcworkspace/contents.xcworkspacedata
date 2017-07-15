@@ -5,13 +5,25 @@
       location = "container:/Users/bastienfalcou/Documents/Find My Number/FindMyContacts.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Carthage/Checkouts/CocoaLumberjack/Lumberjack.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Carthage/Checkouts/DataSource/DataSource.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/ethanol-tools/EthanolTools.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Carthage/Checkouts/ethanol-contacts/EthanolContacts.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Carthage/Checkouts/ethanol-utilities/EthanolUtilities.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/ethanol-ui-components/EthanolUIComponents.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/ethanol-validation-formatting/EthanolValidationFormatting.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Carthage/Checkouts/ReactiveCocoa/ReactiveCocoa.xcodeproj">
@@ -21,6 +33,12 @@
    </FileRef>
    <FileRef
       location = "group:Carthage/Checkouts/Result/Result.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/libPhoneNumber-iOS/libPhoneNumber.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/NSInvocation-Helpers/NSInvocationHelpers.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

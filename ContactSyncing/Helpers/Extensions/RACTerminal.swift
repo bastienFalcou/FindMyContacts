@@ -117,6 +117,12 @@ extension Reactive where Base: UISegmentedControl {
 	}
 }
 
+extension Reactive where Base: UIGestureRecognizer {
+	var isEnabled: BindingTarget<Bool> {
+		return target { $0.isEnabled = $1 }
+	}
+}
+
 extension Reactive where Base: UITableView {
 	var setEditing: BindingTarget<Bool> {
 		return target { $0.setEditing($1, animated: true) }
