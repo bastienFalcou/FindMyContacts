@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Missed Contacts Widget.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Realm.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -33,6 +38,11 @@
 			<true/>
 		</dict>
 		<key>E1415DB4A14C24B01E2CB3F8A3E0D634</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F706883D69301A6D19A082D2ECD0DCAE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

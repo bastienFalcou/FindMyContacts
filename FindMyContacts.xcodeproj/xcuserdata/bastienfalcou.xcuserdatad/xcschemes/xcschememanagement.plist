@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Missed Contacts Widget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>44</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0C3EFA911F1ACD0E00F81915</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0C9B5B491E1FA80F00F7EF7A</key>
 		<dict>
 			<key>primary</key>

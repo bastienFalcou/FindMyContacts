@@ -10,6 +10,8 @@ import Foundation
 import RealmSwift
 
 final class RealmManager: NSObject {
+	private static let applicationGroupIdentifier = "group.bastienFalcou.FindMyContacts"
+
 	static let shared = RealmManager()
 
 	let realm: Realm
@@ -18,6 +20,13 @@ final class RealmManager: NSObject {
 		guard Thread.isMainThread else {
 			fatalError("Realm Manager: main Realm was created from background Thread")
 		}
+
+		if let container = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: RealmManager.applicationGroupIdentifier) {
+			let realmURL = container.absoluteURL.appendingPathComponent("default.realm")
+			let config = Realm.Configuration(fileURL: realmURL)
+			Realm.Configuration.defaultConfiguration = config
+		}
+
 		self.realm = try! Realm()
 	}
 
