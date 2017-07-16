@@ -13,6 +13,8 @@ import ReactiveSwift
 import DataSource
 
 class TodayViewController: UIViewController {
+	fileprivate static let preferredExpandedContentHeight: CGFloat = 330.0
+
 	@IBOutlet private var newContactsLabel: UILabel!
 	@IBOutlet private var tableView: UITableView!
 
@@ -25,7 +27,7 @@ class TodayViewController: UIViewController {
 		if #available(iOSApplicationExtension 10.0, *) {
 			self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
 		} else {
-			// Fallback on earlier versions
+			self.preferredContentSize.height = TodayViewController.preferredExpandedContentHeight
 		}
 
 		if !ContactFetcher.shared.isContactsPermissionGranted.value {
@@ -33,7 +35,8 @@ class TodayViewController: UIViewController {
 		}
 
 		self.newContactsLabel.reactive.text <~ self.viewModel.syncedPhoneContacts.producer.map {
-			$0.isEmpty ? "No New Contact" : "\($0.count) New Contact\($0.count > 1 ? "s" : "")"
+			let newContactsCount = $0.filter { !$0.hasBeenSeen }.count
+			return newContactsCount == 0 ? "No New Contact" : "\(newContactsCount) New Contact\(newContactsCount > 1 ? "s" : "")"
 		}
 
 		self.tableDataSource.reuseIdentifierForItem = { _ in
@@ -52,7 +55,6 @@ extension TodayViewController: NCWidgetProviding {
 		ContactFetcher.shared.syncContactsAction.apply().startWithResult { [weak self] result in
 			switch result {
 			case .success(let syncedContacts):
-				self?.viewModel.syncedPhoneContacts.value.removeAll() // TODO: Test if needed given that set
 				syncedContacts.forEach { self?.viewModel.syncedPhoneContacts.value.insert($0) }
 
 				self?.viewModel.updateDataSource()
@@ -65,18 +67,13 @@ extension TodayViewController: NCWidgetProviding {
 			case .failure:
 				completionHandler(.failed)
 			}
-
-			if let syncedContacts = result.value {
-				self?.viewModel.syncedPhoneContacts.value.removeAll() // TODO: Test if needed given that set
-				syncedContacts.forEach { self?.viewModel.syncedPhoneContacts.value.insert($0) }
-			}
 		}
 	}
 
 	@available(iOSApplicationExtension 10.0, *)
 	func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
 		if activeDisplayMode == .expanded {
-			preferredContentSize = CGSize(width: 0.0, height: 330.0)
+			preferredContentSize = CGSize(width: 0.0, height: TodayViewController.preferredExpandedContentHeight)
 		} else if activeDisplayMode == .compact {
 			preferredContentSize = maxSize
 		}
