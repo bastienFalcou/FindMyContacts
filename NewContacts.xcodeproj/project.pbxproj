@@ -14,7 +14,7 @@
 		0C3EFA941F1ACD0E00F81915 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3EFA931F1ACD0E00F81915 /* NotificationCenter.framework */; };
 		0C3EFA971F1ACD0E00F81915 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3EFA961F1ACD0E00F81915 /* TodayViewController.swift */; };
 		0C3EFA9A1F1ACD0E00F81915 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C3EFA981F1ACD0E00F81915 /* MainInterface.storyboard */; };
-		0C3EFA9E1F1ACD0E00F81915 /* Missed Contacts Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0C3EFA921F1ACD0E00F81915 /* Missed Contacts Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0C3EFA9E1F1ACD0E00F81915 /* NewContactsWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0C3EFA921F1ACD0E00F81915 /* NewContactsWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0C3EFAA31F1AD03E00F81915 /* ContactFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6638CB1E1FFFB9003C1008 /* ContactFetcher.swift */; };
 		0C3EFAA61F1AD18600F81915 /* DataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416E61EB3A21200E1DBBE /* DataSource.framework */; };
 		0C3EFAA71F1AD18600F81915 /* EthanolContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5416E71EB3A21200E1DBBE /* EthanolContacts.framework */; };
@@ -120,7 +120,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				0C3EFA9E1F1ACD0E00F81915 /* Missed Contacts Widget.appex in Embed App Extensions */,
+				0C3EFA9E1F1ACD0E00F81915 /* NewContactsWidget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,7 +154,7 @@
 		0C0536201F0BCBA9005FFC83 /* ContactTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableHeaderView.swift; path = Views/ContactTableHeaderView.swift; sourceTree = "<group>"; };
 		0C20DDDC1F1A6ECB002643B5 /* PushNotificationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushNotificationCoordinator.swift; path = Helpers/Classes/PushNotificationCoordinator.swift; sourceTree = "<group>"; };
 		0C262E211F126E8A006688DF /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsViewController.swift; path = Controllers/ContactsViewController.swift; sourceTree = "<group>"; };
-		0C3EFA921F1ACD0E00F81915 /* Missed Contacts Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Missed Contacts Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C3EFA921F1ACD0E00F81915 /* NewContactsWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NewContactsWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C3EFA931F1ACD0E00F81915 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		0C3EFA961F1ACD0E00F81915 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		0C3EFA991F1ACD0E00F81915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -451,7 +451,7 @@
 				0C9B5B4A1E1FA80F00F7EF7A /* NewContacts.app */,
 				0C9B5B5E1E1FA81000F7EF7A /* NewContactsTests.xctest */,
 				0C9B5B691E1FA81000F7EF7A /* NewContactsUITests.xctest */,
-				0C3EFA921F1ACD0E00F81915 /* Missed Contacts Widget.appex */,
+				0C3EFA921F1ACD0E00F81915 /* NewContactsWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -507,9 +507,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0C3EFA911F1ACD0E00F81915 /* Missed Contacts Widget */ = {
+		0C3EFA911F1ACD0E00F81915 /* NewContactsWidget */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0C3EFAA11F1ACD0E00F81915 /* Build configuration list for PBXNativeTarget "Missed Contacts Widget" */;
+			buildConfigurationList = 0C3EFAA11F1ACD0E00F81915 /* Build configuration list for PBXNativeTarget "NewContactsWidget" */;
 			buildPhases = (
 				227ED7963658A3E4362FA087 /* [CP] Check Pods Manifest.lock */,
 				0C3EFA8E1F1ACD0E00F81915 /* Sources */,
@@ -521,9 +521,9 @@
 			);
 			dependencies = (
 			);
-			name = "Missed Contacts Widget";
+			name = NewContactsWidget;
 			productName = "Missed Contacts Widget";
-			productReference = 0C3EFA921F1ACD0E00F81915 /* Missed Contacts Widget.appex */;
+			productReference = 0C3EFA921F1ACD0E00F81915 /* NewContactsWidget.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		0C9B5B491E1FA80F00F7EF7A /* NewContacts */ = {
@@ -649,7 +649,7 @@
 				0C9B5B491E1FA80F00F7EF7A /* NewContacts */,
 				0C9B5B5D1E1FA81000F7EF7A /* NewContactsTests */,
 				0C9B5B681E1FA81000F7EF7A /* NewContactsUITests */,
-				0C3EFA911F1ACD0E00F81915 /* Missed Contacts Widget */,
+				0C3EFA911F1ACD0E00F81915 /* NewContactsWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -839,7 +839,7 @@
 /* Begin PBXTargetDependency section */
 		0C3EFA9D1F1ACD0E00F81915 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0C3EFA911F1ACD0E00F81915 /* Missed Contacts Widget */;
+			target = 0C3EFA911F1ACD0E00F81915 /* NewContactsWidget */;
 			targetProxy = 0C3EFA9C1F1ACD0E00F81915 /* PBXContainerItemProxy */;
 		};
 		0C9B5B601E1FA81000F7EF7A /* PBXTargetDependency */ = {
@@ -1106,7 +1106,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0C3EFAA11F1ACD0E00F81915 /* Build configuration list for PBXNativeTarget "Missed Contacts Widget" */ = {
+		0C3EFAA11F1ACD0E00F81915 /* Build configuration list for PBXNativeTarget "NewContactsWidget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0C3EFA9F1F1ACD0E00F81915 /* Debug */,

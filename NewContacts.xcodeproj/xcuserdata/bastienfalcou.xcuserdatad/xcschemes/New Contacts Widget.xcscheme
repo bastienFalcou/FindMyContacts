@@ -16,8 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0C3EFA911F1ACD0E00F81915"
-               BuildableName = "Missed Contacts Widget.appex"
-               BlueprintName = "Missed Contacts Widget"
+               BuildableName = "NewContactsWidget.appex"
+               BlueprintName = "NewContactsWidget"
                ReferencedContainer = "container:NewContacts.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,8 +48,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0C3EFA911F1ACD0E00F81915"
-            BuildableName = "Missed Contacts Widget.appex"
-            BlueprintName = "Missed Contacts Widget"
+            BuildableName = "NewContactsWidget.appex"
+            BlueprintName = "NewContactsWidget"
             ReferencedContainer = "container:NewContacts.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -71,8 +71,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0C3EFA911F1ACD0E00F81915"
-            BuildableName = "Missed Contacts Widget.appex"
-            BlueprintName = "Missed Contacts Widget"
+            BuildableName = "NewContactsWidget.appex"
+            BlueprintName = "NewContactsWidget"
             ReferencedContainer = "container:NewContacts.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
