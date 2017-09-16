@@ -209,16 +209,16 @@
 		0C6C28651EB37C2800ADD05C /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-fnhlnlcwwerdpbcbuuyypzlfijty/Build/Products/Debug-iphoneos/ReactiveSwift.framework"; sourceTree = "<group>"; };
 		0C6C28661EB37C2800ADD05C /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-fnhlnlcwwerdpbcbuuyypzlfijty/Build/Products/Debug-iphoneos/Result.framework"; sourceTree = "<group>"; };
 		0C932E731F123C0800F1D88B /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIKitExtensions.swift; path = Helpers/Extensions/UIKitExtensions.swift; sourceTree = "<group>"; };
-		0C9B5B4A1E1FA80F00F7EF7A /* FindMyContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMyContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C9B5B4A1E1FA80F00F7EF7A /* NewContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9B5B4D1E1FA80F00F7EF7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C9B5B521E1FA80F00F7EF7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C9B5B541E1FA80F00F7EF7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C9B5B571E1FA80F00F7EF7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C9B5B591E1FA80F00F7EF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0C9B5B5E1E1FA81000F7EF7A /* FindMyContactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindMyContactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C9B5B5E1E1FA81000F7EF7A /* NewContactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewContactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9B5B621E1FA81000F7EF7A /* ContactSyncingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSyncingTests.swift; sourceTree = "<group>"; };
 		0C9B5B641E1FA81000F7EF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0C9B5B691E1FA81000F7EF7A /* FindMyContactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindMyContactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C9B5B691E1FA81000F7EF7A /* NewContactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewContactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9B5B6D1E1FA81000F7EF7A /* ContactSyncingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSyncingUITests.swift; sourceTree = "<group>"; };
 		0C9B5B6F1E1FA81000F7EF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CDDB6851E27AA9D00BE8E7E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -448,9 +448,9 @@
 		0C9B5B4B1E1FA80F00F7EF7A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0C9B5B4A1E1FA80F00F7EF7A /* FindMyContacts.app */,
-				0C9B5B5E1E1FA81000F7EF7A /* FindMyContactsTests.xctest */,
-				0C9B5B691E1FA81000F7EF7A /* FindMyContactsUITests.xctest */,
+				0C9B5B4A1E1FA80F00F7EF7A /* NewContacts.app */,
+				0C9B5B5E1E1FA81000F7EF7A /* NewContactsTests.xctest */,
+				0C9B5B691E1FA81000F7EF7A /* NewContactsUITests.xctest */,
 				0C3EFA921F1ACD0E00F81915 /* Missed Contacts Widget.appex */,
 			);
 			name = Products;
@@ -526,9 +526,9 @@
 			productReference = 0C3EFA921F1ACD0E00F81915 /* Missed Contacts Widget.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		0C9B5B491E1FA80F00F7EF7A /* FindMyContacts */ = {
+		0C9B5B491E1FA80F00F7EF7A /* NewContacts */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0C9B5B721E1FA81000F7EF7A /* Build configuration list for PBXNativeTarget "FindMyContacts" */;
+			buildConfigurationList = 0C9B5B721E1FA81000F7EF7A /* Build configuration list for PBXNativeTarget "NewContacts" */;
 			buildPhases = (
 				09A0BF310F9A989DB1E772A4 /* [CP] Check Pods Manifest.lock */,
 				0C9B5B461E1FA80F00F7EF7A /* Sources */,
@@ -544,14 +544,14 @@
 			dependencies = (
 				0C3EFA9D1F1ACD0E00F81915 /* PBXTargetDependency */,
 			);
-			name = FindMyContacts;
+			name = NewContacts;
 			productName = ContactSyncing;
-			productReference = 0C9B5B4A1E1FA80F00F7EF7A /* FindMyContacts.app */;
+			productReference = 0C9B5B4A1E1FA80F00F7EF7A /* NewContacts.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0C9B5B5D1E1FA81000F7EF7A /* FindMyContactsTests */ = {
+		0C9B5B5D1E1FA81000F7EF7A /* NewContactsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0C9B5B751E1FA81000F7EF7A /* Build configuration list for PBXNativeTarget "FindMyContactsTests" */;
+			buildConfigurationList = 0C9B5B751E1FA81000F7EF7A /* Build configuration list for PBXNativeTarget "NewContactsTests" */;
 			buildPhases = (
 				0C9B5B5A1E1FA81000F7EF7A /* Sources */,
 				0C9B5B5B1E1FA81000F7EF7A /* Frameworks */,
@@ -562,14 +562,14 @@
 			dependencies = (
 				0C9B5B601E1FA81000F7EF7A /* PBXTargetDependency */,
 			);
-			name = FindMyContactsTests;
+			name = NewContactsTests;
 			productName = ContactSyncingTests;
-			productReference = 0C9B5B5E1E1FA81000F7EF7A /* FindMyContactsTests.xctest */;
+			productReference = 0C9B5B5E1E1FA81000F7EF7A /* NewContactsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0C9B5B681E1FA81000F7EF7A /* FindMyContactsUITests */ = {
+		0C9B5B681E1FA81000F7EF7A /* NewContactsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0C9B5B781E1FA81000F7EF7A /* Build configuration list for PBXNativeTarget "FindMyContactsUITests" */;
+			buildConfigurationList = 0C9B5B781E1FA81000F7EF7A /* Build configuration list for PBXNativeTarget "NewContactsUITests" */;
 			buildPhases = (
 				0C9B5B651E1FA81000F7EF7A /* Sources */,
 				0C9B5B661E1FA81000F7EF7A /* Frameworks */,
@@ -580,9 +580,9 @@
 			dependencies = (
 				0C9B5B6B1E1FA81000F7EF7A /* PBXTargetDependency */,
 			);
-			name = FindMyContactsUITests;
+			name = NewContactsUITests;
 			productName = ContactSyncingUITests;
-			productReference = 0C9B5B691E1FA81000F7EF7A /* FindMyContactsUITests.xctest */;
+			productReference = 0C9B5B691E1FA81000F7EF7A /* NewContactsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -633,7 +633,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0C9B5B451E1FA80F00F7EF7A /* Build configuration list for PBXProject "FindMyContacts" */;
+			buildConfigurationList = 0C9B5B451E1FA80F00F7EF7A /* Build configuration list for PBXProject "NewContacts" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -646,9 +646,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0C9B5B491E1FA80F00F7EF7A /* FindMyContacts */,
-				0C9B5B5D1E1FA81000F7EF7A /* FindMyContactsTests */,
-				0C9B5B681E1FA81000F7EF7A /* FindMyContactsUITests */,
+				0C9B5B491E1FA80F00F7EF7A /* NewContacts */,
+				0C9B5B5D1E1FA81000F7EF7A /* NewContactsTests */,
+				0C9B5B681E1FA81000F7EF7A /* NewContactsUITests */,
 				0C3EFA911F1ACD0E00F81915 /* Missed Contacts Widget */,
 			);
 		};
@@ -844,12 +844,12 @@
 		};
 		0C9B5B601E1FA81000F7EF7A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0C9B5B491E1FA80F00F7EF7A /* FindMyContacts */;
+			target = 0C9B5B491E1FA80F00F7EF7A /* NewContacts */;
 			targetProxy = 0C9B5B5F1E1FA81000F7EF7A /* PBXContainerItemProxy */;
 		};
 		0C9B5B6B1E1FA81000F7EF7A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0C9B5B491E1FA80F00F7EF7A /* FindMyContacts */;
+			target = 0C9B5B491E1FA80F00F7EF7A /* NewContacts */;
 			targetProxy = 0C9B5B6A1E1FA81000F7EF7A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1056,7 +1056,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = bastienFalcou.ContactSyncingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindMyContacts.app/FindMyContacts";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewContacts.app/NewContacts";
 			};
 			name = Debug;
 		};
@@ -1071,7 +1071,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = bastienFalcou.ContactSyncingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindMyContacts.app/FindMyContacts";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewContacts.app/NewContacts";
 			};
 			name = Release;
 		};
@@ -1115,7 +1115,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0C9B5B451E1FA80F00F7EF7A /* Build configuration list for PBXProject "FindMyContacts" */ = {
+		0C9B5B451E1FA80F00F7EF7A /* Build configuration list for PBXProject "NewContacts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0C9B5B701E1FA81000F7EF7A /* Debug */,
@@ -1124,7 +1124,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0C9B5B721E1FA81000F7EF7A /* Build configuration list for PBXNativeTarget "FindMyContacts" */ = {
+		0C9B5B721E1FA81000F7EF7A /* Build configuration list for PBXNativeTarget "NewContacts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0C9B5B731E1FA81000F7EF7A /* Debug */,
@@ -1133,7 +1133,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0C9B5B751E1FA81000F7EF7A /* Build configuration list for PBXNativeTarget "FindMyContactsTests" */ = {
+		0C9B5B751E1FA81000F7EF7A /* Build configuration list for PBXNativeTarget "NewContactsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0C9B5B761E1FA81000F7EF7A /* Debug */,
@@ -1142,7 +1142,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0C9B5B781E1FA81000F7EF7A /* Build configuration list for PBXNativeTarget "FindMyContactsUITests" */ = {
+		0C9B5B781E1FA81000F7EF7A /* Build configuration list for PBXNativeTarget "NewContactsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0C9B5B791E1FA81000F7EF7A /* Debug */,

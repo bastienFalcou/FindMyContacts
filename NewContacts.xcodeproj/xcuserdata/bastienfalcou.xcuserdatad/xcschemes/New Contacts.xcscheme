@@ -1,26 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "0830"
-   wasCreatedForAppExtension = "YES"
-   version = "2.0">
+   version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0C3EFA911F1ACD0E00F81915"
-               BuildableName = "Missed Contacts Widget.appex"
-               BlueprintName = "Missed Contacts Widget"
-               ReferencedContainer = "container:FindMyContacts.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
@@ -43,14 +28,34 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0C9B5B5D1E1FA81000F7EF7A"
+               BuildableName = "FindMyContactsTests.xctest"
+               BlueprintName = "FindMyContactsTests"
+               ReferencedContainer = "container:FindMyContacts.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0C9B5B681E1FA81000F7EF7A"
+               BuildableName = "FindMyContactsUITests.xctest"
+               BlueprintName = "FindMyContactsUITests"
+               ReferencedContainer = "container:FindMyContacts.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0C3EFA911F1ACD0E00F81915"
-            BuildableName = "Missed Contacts Widget.appex"
-            BlueprintName = "Missed Contacts Widget"
-            ReferencedContainer = "container:FindMyContacts.xcodeproj">
+            BlueprintIdentifier = "0C9B5B491E1FA80F00F7EF7A"
+            BuildableName = "NewContacts.app"
+            BlueprintName = "NewContacts"
+            ReferencedContainer = "container:NewContacts.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,23 +63,22 @@
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
-      selectedDebuggerIdentifier = ""
-      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
-      allowLocationSimulation = "YES"
-      launchAutomaticallySubstyle = "2">
+      allowLocationSimulation = "YES">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0C9B5B491E1FA80F00F7EF7A"
-            BuildableName = "FindMyContacts.app"
-            BlueprintName = "FindMyContacts"
-            ReferencedContainer = "container:FindMyContacts.xcodeproj">
+            BuildableName = "NewContacts.app"
+            BlueprintName = "NewContacts"
+            ReferencedContainer = "container:NewContacts.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,8 +89,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      debugDocumentVersioning = "YES"
-      launchAutomaticallySubstyle = "2">
+      debugDocumentVersioning = "YES">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference

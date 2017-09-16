@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "container:/Users/bastienfalcou/Documents/Find My Number/FindMyContacts.xcodeproj">
+      location = "container:/Users/bastienfalcou/Documents/Find My Number/NewContacts.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Carthage/Checkouts/CocoaLumberjack/Lumberjack.xcodeproj">
