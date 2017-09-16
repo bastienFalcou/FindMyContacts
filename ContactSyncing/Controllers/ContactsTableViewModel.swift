@@ -64,10 +64,10 @@ final class ContactsTableViewModel: NSObject {
 	}
 
 	fileprivate func updateDataSource() {
-		let existingContacts = self.syncedPhoneContacts.value.filter { !$0.hasBeenSeen }
+		let existingContacts = self.syncedPhoneContacts.value.filter { !$0.hasBeenSeen }.sorted { $0.0.dateAdded < $0.1.dateAdded }
 		var sections: [DataSourceSection<ContactTableViewCellModel>] = existingContacts
 			.splitBetween {
-				return floor($0.0.dateAdded.timeIntervalSince1970 / (60 * 60 * 24)) != floor($0.1.dateAdded.timeIntervalSince1970 / (60 * 60 * 24))
+				return floor($0.0.dateAdded.timeIntervalSince1970 / (60.0 * 60.0 * 24.0)) != floor($0.1.dateAdded.timeIntervalSince1970 / (60.0 * 60.0 * 24.0))
 			}.map { contacts in
 				return DataSourceSection(items: contacts.map { ContactTableViewCellModel(contact: $0) })
 		}
