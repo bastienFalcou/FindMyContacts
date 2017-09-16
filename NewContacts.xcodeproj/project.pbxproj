@@ -892,7 +892,7 @@
 				INFOPLIST_FILE = "Missed Contacts Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "bastienFalcou.FindMyContacts.Missed-Contacts-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = bastienFalcou.NewContacts.NewContactsWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -909,7 +909,7 @@
 				INFOPLIST_FILE = "Missed Contacts Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "bastienFalcou.FindMyContacts.Missed-Contacts-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = bastienFalcou.NewContacts.NewContactsWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -1022,7 +1022,7 @@
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
 				INFOPLIST_FILE = ContactSyncing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bastienFalcou.FindMyContacts;
+				PRODUCT_BUNDLE_IDENTIFIER = bastienFalcou.NewContacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1039,7 +1039,7 @@
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
 				INFOPLIST_FILE = ContactSyncing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bastienFalcou.FindMyContacts;
+				PRODUCT_BUNDLE_IDENTIFIER = bastienFalcou.NewContacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
