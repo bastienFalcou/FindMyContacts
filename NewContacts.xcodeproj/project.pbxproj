@@ -80,11 +80,11 @@
 		0C9B5B531E1FA80F00F7EF7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9B5B511E1FA80F00F7EF7A /* Main.storyboard */; };
 		0C9B5B551E1FA80F00F7EF7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C9B5B541E1FA80F00F7EF7A /* Assets.xcassets */; };
 		0C9B5B581E1FA80F00F7EF7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9B5B561E1FA80F00F7EF7A /* LaunchScreen.storyboard */; };
-		0C9B5B631E1FA81000F7EF7A /* ContactSyncingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B5B621E1FA81000F7EF7A /* ContactSyncingTests.swift */; };
 		0C9B5B6E1E1FA81000F7EF7A /* ContactSyncingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B5B6D1E1FA81000F7EF7A /* ContactSyncingUITests.swift */; };
 		0CDDB6861E27AA9D00BE8E7E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDB6851E27AA9D00BE8E7E /* Constants.swift */; };
 		0CDDB6881E27EB7600BE8E7E /* SyncProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDB6871E27EB7600BE8E7E /* SyncProtocol.swift */; };
 		0CDDB68C1E27ECB600BE8E7E /* PhoneContact+Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDB68B1E27ECB600BE8E7E /* PhoneContact+Sync.swift */; };
+		0CFE7E471F7319E00040F8CA /* NewContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE7E461F7319E00040F8CA /* NewContactsTests.swift */; };
 		5D1CBB02C1142D2B4E02B6B7 /* Pods_FindMyContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E837C7E8168C1886ED0028 /* Pods_FindMyContacts.framework */; };
 		C78D671BDD3A5A89E47F1927 /* Pods_Missed_Contacts_Widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BFC83135E093D28DA284F3 /* Pods_Missed_Contacts_Widget.framework */; };
 /* End PBXBuildFile section */
@@ -216,14 +216,14 @@
 		0C9B5B571E1FA80F00F7EF7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C9B5B591E1FA80F00F7EF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C9B5B5E1E1FA81000F7EF7A /* NewContactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewContactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C9B5B621E1FA81000F7EF7A /* ContactSyncingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSyncingTests.swift; sourceTree = "<group>"; };
-		0C9B5B641E1FA81000F7EF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C9B5B691E1FA81000F7EF7A /* NewContactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewContactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9B5B6D1E1FA81000F7EF7A /* ContactSyncingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSyncingUITests.swift; sourceTree = "<group>"; };
 		0C9B5B6F1E1FA81000F7EF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CDDB6851E27AA9D00BE8E7E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0CDDB6871E27EB7600BE8E7E /* SyncProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SyncProtocol.swift; path = Models/Sync/SyncProtocol.swift; sourceTree = "<group>"; };
 		0CDDB68B1E27ECB600BE8E7E /* PhoneContact+Sync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PhoneContact+Sync.swift"; path = "Models/Sync/PhoneContact+Sync.swift"; sourceTree = "<group>"; };
+		0CFE7E451F7319D70040F8CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = NewContactsTests/Info.plist; sourceTree = SOURCE_ROOT; };
+		0CFE7E461F7319E00040F8CA /* NewContactsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewContactsTests.swift; path = NewContactsTests/NewContactsTests.swift; sourceTree = SOURCE_ROOT; };
 		16A7AABA1B7E5FFB287F140B /* Pods-ContactSyncing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactSyncing.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContactSyncing/Pods-ContactSyncing.release.xcconfig"; sourceTree = "<group>"; };
 		2CA7D95A5F8662EB27B0B837 /* Pods-ContactSyncing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactSyncing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContactSyncing/Pods-ContactSyncing.debug.xcconfig"; sourceTree = "<group>"; };
 		4FD85B55EA01113C67D75C21 /* Pods-Missed Contacts Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Missed Contacts Widget.release.xcconfig"; path = "Pods/Target Support Files/Pods-Missed Contacts Widget/Pods-Missed Contacts Widget.release.xcconfig"; sourceTree = "<group>"; };
@@ -436,7 +436,7 @@
 			isa = PBXGroup;
 			children = (
 				0C9B5B4C1E1FA80F00F7EF7A /* FindMyContacts */,
-				0C9B5B611E1FA81000F7EF7A /* FindMyContactsTests */,
+				0C9B5B611E1FA81000F7EF7A /* NewContactsTests */,
 				0C9B5B6C1E1FA81000F7EF7A /* FindMyContactsUITests */,
 				0C3EFA951F1ACD0E00F81915 /* Missed Contacts Widget */,
 				0C9B5B4B1E1FA80F00F7EF7A /* Products */,
@@ -471,13 +471,13 @@
 			path = ContactSyncing;
 			sourceTree = "<group>";
 		};
-		0C9B5B611E1FA81000F7EF7A /* FindMyContactsTests */ = {
+		0C9B5B611E1FA81000F7EF7A /* NewContactsTests */ = {
 			isa = PBXGroup;
 			children = (
-				0C9B5B621E1FA81000F7EF7A /* ContactSyncingTests.swift */,
-				0C9B5B641E1FA81000F7EF7A /* Info.plist */,
+				0CFE7E461F7319E00040F8CA /* NewContactsTests.swift */,
+				0CFE7E451F7319D70040F8CA /* Info.plist */,
 			);
-			name = FindMyContactsTests;
+			name = NewContactsTests;
 			path = ContactSyncingTests;
 			sourceTree = "<group>";
 		};
@@ -822,7 +822,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C9B5B631E1FA81000F7EF7A /* ContactSyncingTests.swift in Sources */,
+				0CFE7E471F7319E00040F8CA /* NewContactsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1051,7 +1051,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 975YEVYX95;
-				INFOPLIST_FILE = ContactSyncingTests/Info.plist;
+				INFOPLIST_FILE = NewContactsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bastienFalcou.ContactSyncingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1066,7 +1066,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 975YEVYX95;
-				INFOPLIST_FILE = ContactSyncingTests/Info.plist;
+				INFOPLIST_FILE = NewContactsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bastienFalcou.ContactSyncingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

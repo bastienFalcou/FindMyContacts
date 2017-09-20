@@ -1,6 +1,6 @@
 //
-//  FindMyContactsTests.swift
-//  FindMyContactsTests
+//  NewContactsTests.swift
+//  NewContactsTests
 //
 //  Created by Bastien Falcou on 1/6/17.
 //  Copyright © 2017 Bastien Falcou. All rights reserved.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import NewContacts
 
-class FindMyContactsTests: XCTestCase {
+class NewContactsTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
