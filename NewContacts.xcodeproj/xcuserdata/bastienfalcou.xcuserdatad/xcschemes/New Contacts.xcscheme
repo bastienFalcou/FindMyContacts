@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0C9B5B5D1E1FA81000F7EF7A"
-               BuildableName = "FindMyContactsTests.xctest"
-               BlueprintName = "FindMyContactsTests"
-               ReferencedContainer = "container:FindMyContacts.xcodeproj">
+               BuildableName = "NewContactsTests.xctest"
+               BlueprintName = "NewContactsTests"
+               ReferencedContainer = "container:NewContacts.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0C9B5B681E1FA81000F7EF7A"
-               BuildableName = "FindMyContactsUITests.xctest"
-               BlueprintName = "FindMyContactsUITests"
-               ReferencedContainer = "container:FindMyContacts.xcodeproj">
+               BuildableName = "NewContactsUITests.xctest"
+               BlueprintName = "NewContactsUITests"
+               ReferencedContainer = "container:NewContacts.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

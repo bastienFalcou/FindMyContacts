@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import FindMyContacts
+@testable import NewContacts
 
 class FindMyContactsTests: XCTestCase {
     
